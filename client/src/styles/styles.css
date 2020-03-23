@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  width: 100vw;
+  height: 10vh;
+}
+
+nav ul {
+  float: right;
+  position: relative;
+  top: 4vh;
+}
+
+nav ul li {
+  display: inline;
+  padding-bottom: 20px;
+  margin-right: 2vw;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  border-bottom: black solid 2px;
+}
+
+.home {
+  min-height: 60vh;
+  text-align: center;
+}
+
+.footer {
+  border-left: 2px solid blue;
+  margin-left: 2vw;
+}
+
+.login {
+  border-bottom: 1px solid black;
+}
+
+.auth-wrapp {
+  padding: 10vh 0;
+}
+
+.auth-wrapp .auth-main {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin: 30px auto;
+  padding: 10px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.auth-wrapp .auth-main input {
+  position: relative;
+  left: 75px;
+  border: none;
+  border: 1px solid #424242;
+  margin-top: 35px;
+  height: 30px;
+  width: 250px;
+}
+
+.auth-wrapp .auth-main h3 {
+  color: black;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 2rem;
+}
+
+.auth-wrapp .auth-main button {
+  position: relative;
+  left: 85px;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  border-radius: 3px;
+  width: 200px;
+  height: 40px;
+  color: black;
+}
+
+.auth-wrapp .other {
+  margin-top: 3vh;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.red-text {
+  color: red;
+  position: relative;
+  top: 10px;
+  left: 80px;
+}
+
+.user,
+.help,
+.host {
+  min-height: 60vh;
+  padding-top: 10vh;
+}
+/*# sourceMappingURL=styles.css.map */
