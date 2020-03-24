@@ -6,6 +6,19 @@ import { useStateValue } from '../../state';
 const Navbar = () => {
 	const [{ auth }, dispatch] = useStateValue();
 
+	const logout = async () => {
+		try {
+			dispatch({
+				type: 'logout',
+				authenticated: false,
+				resToken: '',
+				setUsername: ''
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<nav className='nav'>
 			<ul>
@@ -24,7 +37,9 @@ const Navbar = () => {
 							<Link to='/user'>{auth.username}</Link>
 						</li>
 						<li>
-							<Link to='/'>Log out</Link>
+							<Link to='/' onClick={logout}>
+								Log out
+							</Link>
 						</li>
 					</>
 				) : (

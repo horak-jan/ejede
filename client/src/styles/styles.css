@@ -39,10 +39,6 @@ nav ul li:hover {
   margin-left: 2vw;
 }
 
-.login {
-  border-bottom: 1px solid black;
-}
-
 .auth-wrapp {
   padding: 10vh 0;
 }

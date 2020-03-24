@@ -6,7 +6,7 @@ const Login = () => {
 	return (
 		<div className='auth-wrapp'>
 			<div className='auth-main'>
-				<p>login here please</p>
+				<h3>Login</h3>
 				<LoginForm />
 			</div>
 		</div>

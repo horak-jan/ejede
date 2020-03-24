@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import '../styles/styles.css';
 import Home from '../views/Home';
@@ -26,6 +26,15 @@ const App = () => {
 	const reducer = (state, action) => {
 		switch (action.type) {
 			case 'authSuccess':
+				return {
+					...state,
+					auth: {
+						isAuthenticated: action.authenticated,
+						token: action.resToken,
+						username: action.setUsername
+					}
+				};
+			case 'logout':
 				return {
 					...state,
 					auth: {
