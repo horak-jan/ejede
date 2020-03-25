@@ -45,9 +45,9 @@ nav ul li:hover {
 
 .auth-wrapp .auth-main {
   width: 400px;
-  height: 500px;
+  height: 510px;
   border: 1px solid #e6e6e6;
-  border-radius: 1px;
+  border-radius: 40px;
   margin: 30px auto;
   padding: 10px;
   -webkit-box-align: stretch;
@@ -98,6 +98,11 @@ nav ul li:hover {
   color: black;
 }
 
+.auth-wrapp .auth-main .helper {
+  margin: 20px auto;
+  font-size: 0.8rem;
+}
+
 .auth-wrapp .other {
   margin-top: 3vh;
   text-align: center;
@@ -111,10 +116,73 @@ nav ul li:hover {
   left: 80px;
 }
 
-.user,
-.help,
 .host {
   min-height: 60vh;
+  padding: 10vh 5vw;
+}
+
+.host .top h2,
+.host .mid h2 {
+  margin-bottom: 7vh;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.host .top h3,
+.host .mid h3 {
+  margin-bottom: 3vh;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.host .top p,
+.host .mid p {
+  margin-bottom: 5vh;
+}
+
+.host .mid-bot {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.host .mid-bot img {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.host .mid-bot .small-print {
+  font-size: 0.8rem;
+  margin-top: 2vh;
+}
+
+.host .mid-bot button {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 200px;
+  height: 30px;
+  background-color: transparent;
+  color: black;
+}
+
+.user,
+.help {
+  min-height: 60vh;
   padding-top: 10vh;
+}
+
+@media (min-width: 650px) {
+  .host .top,
+  .host .mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .host .top div,
+  .host .mid div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

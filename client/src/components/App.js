@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -19,7 +19,8 @@ const App = () => {
 		auth: {
 			isAuthenticated: false,
 			token: '',
-			username: ''
+			username: '',
+			id: ''
 		}
 	};
 
@@ -31,7 +32,8 @@ const App = () => {
 					auth: {
 						isAuthenticated: action.authenticated,
 						token: action.resToken,
-						username: action.setUsername
+						username: action.setUsername,
+						id: action.setId
 					}
 				};
 			case 'logout':
@@ -40,7 +42,8 @@ const App = () => {
 					auth: {
 						isAuthenticated: action.authenticated,
 						token: action.resToken,
-						username: action.setUsername
+						username: action.setUsername,
+						id: action.setId
 					}
 				};
 			default:

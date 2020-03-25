@@ -12,7 +12,8 @@ const Navbar = () => {
 				type: 'logout',
 				authenticated: false,
 				resToken: '',
-				setUsername: ''
+				setUsername: '',
+				setId: ''
 			});
 		} catch (error) {
 			console.log(error);
@@ -34,7 +35,7 @@ const Navbar = () => {
 				{auth.isAuthenticated ? (
 					<>
 						<li>
-							<Link to='/user'>{auth.username}</Link>
+							<Link to={`/user/:${auth.id}`}>{auth.username}</Link>
 						</li>
 						<li>
 							<Link to='/' onClick={logout}>
