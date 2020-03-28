@@ -1,7 +1,6 @@
 const path = require('path');
 const BUILD_DIR = path.resolve(__dirname, './public/build');
 const APP_DIR = path.resolve(__dirname, './client');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -17,7 +16,6 @@ module.exports = {
 		historyApiFallback: true,
 		hot: true
 	},
-	// plugins: [new FaviconsWebpackPlugin('./client/images/favicon.png')],
 	module: {
 		rules: [
 			{
