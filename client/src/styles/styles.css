@@ -30,13 +30,28 @@ nav ul li:hover {
 }
 
 .home {
-  min-height: 60vh;
+  min-height: 80vh;
   text-align: center;
 }
 
 .footer {
-  border-left: 2px solid blue;
-  margin-left: 2vw;
+  width: 60%;
+  margin: 5vh auto;
+  padding-top: 2vh;
+  border-top: 1px solid grey;
+}
+
+.footer .one-fourth {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+  display: none;
+}
+
+.footer .footer-bottom {
+  font-size: 0.8rem;
+  float: left;
 }
 
 .auth-wrapp {
@@ -160,9 +175,15 @@ nav ul li:hover {
   margin-top: 20px;
   border-radius: 10px;
   width: 200px;
-  height: 30px;
+  height: 50px;
   background-color: transparent;
   color: black;
+  border: 2px solid black;
+  font-weight: 600;
+}
+
+.host .bottom {
+  margin-top: 10vh;
 }
 
 .user,
@@ -172,17 +193,54 @@ nav ul li:hover {
 }
 
 @media (min-width: 650px) {
-  .host .top,
-  .host .mid {
+  .host {
+    padding: 10vh 10vw;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 745px) {
+  .mid-bot img {
+    width: 40vw !important;
+    float: right;
+  }
+  .mid-bot p,
+  .mid-bot button {
+    position: relative;
+    top: 3vh;
+    margin-right: 1vw;
+  }
+  .footer {
+    width: 90%;
+    padding: 2vh 5%;
+  }
+  .footer .footer-head {
+    font-weight: 600;
+    margin-bottom: 2vh;
+  }
+  .footer .one-fourth {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    border-bottom: 1px solid grey;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
-  .host .top div,
-  .host .mid div {
+  .footer .one-fourth li {
+    margin-bottom: 2vh;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 20vw;
+  }
+}
+
+@media (min-width: 745px) {
+  .host .bottom {
+    margin-top: 15vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */

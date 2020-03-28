@@ -59,18 +59,19 @@ const Host = () => {
 				</p>
 				<button>Learn more</button>
 			</div>
-			<div className='bottom'></div>
-			<h2>We have got you covered</h2>
-			<p>
-				We know it’s a priority to trust the people staying in your home. Airbnb
-				allows you to set strict requirements for who can book and to get to
-				know guests before their stay.
-			</p>
-			<p>
-				If something does come up, though, we have your back. With our Host
-				Guarantee covering property damage and our Host Protection Insurance for
-				liability, you’re supported as a host throughout.
-			</p>
+			<div className='bottom'>
+				<h2>We have got you covered</h2>
+				<p>
+					We know it’s a priority to trust the people staying in your home.
+					Airbnb allows you to set strict requirements for who can book and to
+					get to know guests before their stay.
+				</p>
+				<p>
+					If something does come up, though, we have your back. With our Host
+					Guarantee covering property damage and our Host Protection Insurance
+					for liability, you’re supported as a host throughout.
+				</p>
+			</div>
 		</div>
 	);
 };

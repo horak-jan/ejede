@@ -26,13 +26,24 @@ nav {
 }
 
 .home {
-	min-height: 60vh;
+	min-height: 80vh;
 	text-align: center;
 }
 
 .footer {
-	border-left: 2px solid blue;
-	margin-left: 2vw;
+	width: 60%;
+	margin: 5vh auto;
+	padding-top: 2vh;
+	border-top: 1px solid grey;
+	.one-fourth {
+		flex: 1;
+		list-style: none;
+		display: none;
+	}
+	.footer-bottom {
+		font-size: 0.8rem;
+		float: left;
+	}
 }
 
 .auth-wrapp {
@@ -136,10 +147,15 @@ nav {
 			margin-top: 20px;
 			border-radius: 10px;
 			width: 200px;
-			height: 30px;
+			height: 50px;
 			background-color: transparent;
 			color: black;
+			border: 2px solid black;
+			font-weight: 600;
 		}
+	}
+	.bottom {
+		margin-top: 10vh;
 	}
 }
 .user,
@@ -150,12 +166,51 @@ nav {
 
 @media (min-width: 650px) {
 	.host {
-		.top,
-		.mid {
+		padding: 10vh 10vw;
+		width: 60%;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 745px) {
+	.mid-bot {
+		img {
+			width: 40vw !important;
+			float: right;
+		}
+		p,
+		button {
+			position: relative;
+			top: 3vh;
+			margin-right: 1vw;
+		}
+	}
+	.footer {
+		width: 90%;
+		padding: 2vh 5%;
+		.footer-head {
+			font-weight: 600;
+			margin-bottom: 2vh;
+		}
+		.one-fourth {
 			display: flex;
-			div {
+			border-bottom: 1px solid grey;
+			margin-top: 2vh;
+			margin-bottom: 2vh;
+			li {
+				margin-bottom: 2vh;
 				flex: 1;
+				flex-wrap: wrap;
+				width: 20vw;
 			}
+		}
+	}
+}
+
+@media (min-width: 745px) {
+	.host {
+		.bottom {
+			margin-top: 15vh;
 		}
 	}
 }
