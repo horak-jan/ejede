@@ -21,6 +21,12 @@ const App = () => {
 			token: '',
 			username: '',
 			id: ''
+		},
+		bookingDate: {
+			startDate: Date,
+			endDate: Date,
+			adults: 0,
+			kids: 0
 		}
 	};
 
@@ -44,6 +50,16 @@ const App = () => {
 						token: action.resToken,
 						username: action.setUsername,
 						id: action.setId
+					}
+				};
+			case 'bookDate':
+				return {
+					...state,
+					bookingDate: {
+						startDate: action.setStartDate,
+						endDate: action.setEndDate,
+						adults: action.setAdults,
+						kids: action.setKids
 					}
 				};
 			default:

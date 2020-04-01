@@ -26,12 +26,14 @@ const Navbar = () => {
 				<li>
 					<Link to='/'>Home</Link>
 				</li>
-				<li>
-					<Link to='/host'>Host a home</Link>
-				</li>
-				<li>
-					<Link to='/help'>Help</Link>
-				</li>
+				<div className='nav-hide'>
+					<li>
+						<Link to='/host'>Host a home</Link>
+					</li>
+					<li>
+						<Link to='/help'>Help</Link>
+					</li>
+				</div>
 				{auth.isAuthenticated ? (
 					<>
 						<li>

@@ -45,7 +45,7 @@ const HouseSchema = new mongoose.Schema(
 			required: true
 		},
 		wifi: {
-			type: String
+			type: Boolean
 		},
 		ac: {
 			type: Boolean

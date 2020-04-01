@@ -15,6 +15,10 @@ nav ul {
   top: 4vh;
 }
 
+nav ul .nav-hide {
+  display: none;
+}
+
 nav ul li {
   display: inline;
   padding-bottom: 20px;
@@ -30,8 +34,52 @@ nav ul li:hover {
 }
 
 .home {
-  min-height: 80vh;
+  min-height: 70vh;
   text-align: center;
+  padding: 2vh 3vw;
+}
+
+.home p {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.home .home-picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .home-picker .picker,
+.home .home-picker .picker-second {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.home input[type='submit'] {
+  position: relative;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  border-radius: 10px;
+  width: 200px;
+  height: 40px;
+  color: black;
+  background-color: #ff5f5a;
+}
+
+.home .home-form-selects {
+  margin-top: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .home-form-selects .form-select {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .footer {
@@ -39,6 +87,10 @@ nav ul li:hover {
   margin: 5vh auto;
   padding-top: 2vh;
   border-top: 1px solid grey;
+}
+
+.footer .footer-head {
+  display: none;
 }
 
 .footer .one-fourth {
@@ -61,7 +113,7 @@ nav ul li:hover {
 .auth-wrapp .auth-main {
   width: 400px;
   height: 510px;
-  border: 1px solid #e6e6e6;
+  border: none;
   border-radius: 40px;
   margin: 30px auto;
   padding: 10px;
@@ -107,10 +159,11 @@ nav ul li:hover {
   letter-spacing: 1.5px;
   font-size: 1.5rem;
   margin-top: 30px;
-  border-radius: 3px;
+  border-radius: 10px;
   width: 200px;
   height: 40px;
   color: black;
+  background-color: #ff5f5a;
 }
 
 .auth-wrapp .auth-main .helper {
@@ -198,9 +251,32 @@ nav ul li:hover {
     width: 60%;
     margin: 0 auto;
   }
+  .footer {
+    width: 90%;
+    padding: 2vh 5%;
+  }
+  .footer .footer-head {
+    font-weight: 600;
+    margin-bottom: 2vh;
+    display: block;
+  }
+  .footer .one-fourth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid grey;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .one-fourth li {
+    margin-bottom: 2vh;
+    width: 30vw;
+  }
 }
 
-@media (min-width: 745px) {
+@media (min-width: 900px) {
   .mid-bot img {
     width: 40vw !important;
     float: right;
@@ -211,36 +287,47 @@ nav ul li:hover {
     top: 3vh;
     margin-right: 1vw;
   }
-  .footer {
-    width: 90%;
-    padding: 2vh 5%;
-  }
-  .footer .footer-head {
-    font-weight: 600;
-    margin-bottom: 2vh;
-  }
-  .footer .one-fourth {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border-bottom: 1px solid grey;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-  }
-  .footer .one-fourth li {
-    margin-bottom: 2vh;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 20vw;
+  .mid-bot button {
+    width: 19vw !important;
   }
 }
 
 @media (min-width: 745px) {
   .host .bottom {
     margin-top: 15vh;
+  }
+  .nav .nav-hide {
+    display: inline;
+  }
+  .auth-wrapp .auth-main {
+    border: 1px solid #e6e6e6;
+  }
+}
+
+@media (min-width: 900px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer .footer-large {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .footer .footer-large .footer-head {
+    font-size: 1rem;
+  }
+  .footer .footer-large .one-fourth {
+    border: none;
+    display: block;
+    font-size: 0.8rem;
+  }
+  .footer .footer-large .one-fourth li {
+    width: 20vw;
+  }
+  .footer .footer-bottom {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

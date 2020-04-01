@@ -21,7 +21,7 @@ exports.index = async function(req, res) {
 	const options = {
 		page,
 		limit,
-		collation: { locale: 'en' },
+		collation: { locale: 'cz' },
 		customLabels: {
 			totalDocs: 'totalResults',
 			docs: 'houses'
@@ -161,6 +161,7 @@ exports.seed = async function(req, res) {
 				email: faker.internet.email(),
 				password,
 				firstName: faker.name.firstName(),
+				username: faker.name.firstName(),
 				lastName: `${faker.name.lastName()}`,
 				isVerified: true,
 				bio: faker.lorem.paragraph(),
@@ -183,7 +184,7 @@ exports.seed = async function(req, res) {
 					bedrooms: faker.random.number(3),
 					beds: faker.random.number(4),
 					price: faker.random.number(500),
-					bath: faker.random.number(2),
+					baths: faker.random.number(2),
 					wifi: faker.random.boolean(),
 					ac: faker.random.boolean(),
 					pets: faker.random.boolean(),
