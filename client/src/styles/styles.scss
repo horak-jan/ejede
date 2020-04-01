@@ -33,14 +33,17 @@ nav {
 	text-align: center;
 	padding: 2vh 3vw;
 	p {
-		margin-top: 2vh;
-		margin-bottom: 2vh;
+		margin-top: 7vh;
+		margin-bottom: 7vh;
 	}
 	.home-picker {
 		display: flex;
 		.picker,
 		.picker-second {
 			flex: 1;
+			.react-date-picker__wrapper {
+				width: 45vw;
+			}
 		}
 	}
 	input[type='submit'] {
@@ -52,7 +55,7 @@ nav {
 		border-radius: 10px;
 		width: 200px;
 		height: 40px;
-		color: black;
+		color: white;
 		background-color: rgb(255, 95, 90);
 	}
 	.home-form-selects {
@@ -60,6 +63,13 @@ nav {
 		display: flex;
 		.form-select {
 			flex: 1;
+			select {
+				width: 45vw;
+				background-color: transparent;
+				padding: 0 2px;
+				height: 31px;
+				border: 1px solid black;
+			}
 		}
 	}
 }
