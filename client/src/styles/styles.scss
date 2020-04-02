@@ -42,19 +42,19 @@ nav {
 		.picker-second {
 			flex: 1;
 			.react-date-picker__wrapper {
-				width: 45vw;
+				width: 43vw;
 			}
 		}
 	}
 	input[type='submit'] {
 		position: relative;
-		// left: 85px;
 		letter-spacing: 1.5px;
 		font-size: 1.5rem;
 		margin-top: 30px;
-		border-radius: 10px;
-		width: 200px;
+		border-radius: 5px;
+		width: 90vw;
 		height: 40px;
+		border: 1px solid rgb(255, 95, 90);
 		color: white;
 		background-color: rgb(255, 95, 90);
 	}
@@ -64,7 +64,7 @@ nav {
 		.form-select {
 			flex: 1;
 			select {
-				width: 45vw;
+				width: 43vw;
 				background-color: transparent;
 				padding: 0 2px;
 				height: 31px;
@@ -240,24 +240,6 @@ nav {
 	}
 }
 
-@media (min-width: 900px) {
-	.mid-bot {
-		img {
-			width: 40vw !important;
-			float: right;
-		}
-		p,
-		button {
-			position: relative;
-			top: 3vh;
-			margin-right: 1vw;
-		}
-		button {
-			width: 19vw !important;
-		}
-	}
-}
-
 @media (min-width: 745px) {
 	.host {
 		.bottom {
@@ -272,6 +254,47 @@ nav {
 	.auth-wrapp {
 		.auth-main {
 			border: 1px solid #e6e6e6;
+		}
+	}
+
+	//HOME
+	.home {
+		.home-form-wrapper {
+			width: 500px;
+			min-height: 60vh;
+			border: 1px solid black;
+			border-radius: 5px;
+			padding-top: 4vh;
+			.home-picker {
+				.picker,
+				.picker-second {
+					.react-date-picker__wrapper {
+						width: 195px;
+						height: 31px;
+					}
+				}
+			}
+		}
+		h2 {
+			font-size: 1.8rem;
+		}
+		p {
+			font-size: 1.1rem;
+		}
+		.home-form-selects {
+			.form-select {
+				select {
+					width: 78%;
+					height: 31px;
+					border: 1px solid black;
+				}
+			}
+		}
+
+		input[type='submit'] {
+			width: 90%;
+			height: 50px;
+			margin-top: 8vh;
 		}
 	}
 }
@@ -295,6 +318,22 @@ nav {
 		}
 		.footer-bottom {
 			display: none;
+		}
+	}
+
+	.mid-bot {
+		img {
+			width: 40vw !important;
+			float: right;
+		}
+		p,
+		button {
+			position: relative;
+			top: 3vh;
+			margin-right: 1vw;
+		}
+		button {
+			width: 19vw !important;
 		}
 	}
 }

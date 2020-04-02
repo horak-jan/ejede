@@ -33,6 +33,7 @@ const HomeForm = () => {
 			<div className='home-picker'>
 				<div className='picker'>
 					PŘÍJEZD
+					<br />
 					<DatePicker
 						calendarIcon={null}
 						onChange={setStartDate}
@@ -44,6 +45,7 @@ const HomeForm = () => {
 				</div>
 				<div className='picker second'>
 					ODJEZD
+					<br />
 					<DatePicker
 						calendarIcon={null}
 						onChange={setendDate}

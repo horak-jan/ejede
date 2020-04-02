@@ -59,7 +59,7 @@ nav ul li:hover {
 
 .home .home-picker .picker .react-date-picker__wrapper,
 .home .home-picker .picker-second .react-date-picker__wrapper {
-  width: 45vw;
+  width: 43vw;
 }
 
 .home input[type='submit'] {
@@ -67,9 +67,10 @@ nav ul li:hover {
   letter-spacing: 1.5px;
   font-size: 1.5rem;
   margin-top: 30px;
-  border-radius: 10px;
-  width: 200px;
+  border-radius: 5px;
+  width: 90vw;
   height: 40px;
+  border: 1px solid #ff5f5a;
   color: white;
   background-color: #ff5f5a;
 }
@@ -88,7 +89,7 @@ nav ul li:hover {
 }
 
 .home .home-form-selects .form-select select {
-  width: 45vw;
+  width: 43vw;
   background-color: transparent;
   padding: 0 2px;
   height: 31px;
@@ -289,22 +290,6 @@ nav ul li:hover {
   }
 }
 
-@media (min-width: 900px) {
-  .mid-bot img {
-    width: 40vw !important;
-    float: right;
-  }
-  .mid-bot p,
-  .mid-bot button {
-    position: relative;
-    top: 3vh;
-    margin-right: 1vw;
-  }
-  .mid-bot button {
-    width: 19vw !important;
-  }
-}
-
 @media (min-width: 745px) {
   .host .bottom {
     margin-top: 15vh;
@@ -314,6 +299,34 @@ nav ul li:hover {
   }
   .auth-wrapp .auth-main {
     border: 1px solid #e6e6e6;
+  }
+  .home .home-form-wrapper {
+    width: 500px;
+    min-height: 60vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-top: 4vh;
+  }
+  .home .home-form-wrapper .home-picker .picker .react-date-picker__wrapper,
+  .home .home-form-wrapper .home-picker .picker-second .react-date-picker__wrapper {
+    width: 195px;
+    height: 31px;
+  }
+  .home h2 {
+    font-size: 1.8rem;
+  }
+  .home p {
+    font-size: 1.1rem;
+  }
+  .home .home-form-selects .form-select select {
+    width: 78%;
+    height: 31px;
+    border: 1px solid black;
+  }
+  .home input[type='submit'] {
+    width: 90%;
+    height: 50px;
+    margin-top: 8vh;
   }
 }
 
@@ -341,6 +354,19 @@ nav ul li:hover {
   }
   .footer .footer-bottom {
     display: none;
+  }
+  .mid-bot img {
+    width: 40vw !important;
+    float: right;
+  }
+  .mid-bot p,
+  .mid-bot button {
+    position: relative;
+    top: 3vh;
+    margin-right: 1vw;
+  }
+  .mid-bot button {
+    width: 19vw !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
