@@ -7,15 +7,20 @@ import { useStateValue } from '../../state';
 
 const HomeForm = () => {
 	const { register, handleSubmit, errors } = useForm();
-
 	const [startDate, setStartDate] = useState(new Date());
-	const [endDate, setendDate] = useState(new Date());
+	const [endDate, setendDate] = useState(
+		new Date(
+			startDate.getFullYear(),
+			startDate.getMonth(),
+			startDate.getDate() + 7
+		)
+	);
 
 	const [{ bookingDate }, dispatch] = useStateValue();
+	let history = useHistory();
 
 	const onSubmit = async data => {
 		try {
-			console.log(data.adults);
 			dispatch({
 				type: 'bookDate',
 				setStartDate: startDate,
@@ -23,6 +28,8 @@ const HomeForm = () => {
 				setAdults: data.adults,
 				setKids: data.kids
 			});
+
+			history.push('/browse');
 		} catch (error) {
 			console.log(error);
 		}
@@ -76,6 +83,7 @@ const HomeForm = () => {
 							DĚTI
 							<br />
 							<select name='kids' ref={register}>
+								<option value={0}>BEZ DĚTÍ</option>
 								<option value={1}>1 DÍTĚ</option>
 								<option value={2}>2 DĚTI</option>
 								<option value={3}>3 DĚTI</option>

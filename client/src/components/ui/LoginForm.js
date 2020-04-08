@@ -10,21 +10,19 @@ const LoginForm = () => {
 	const [{ auth }, dispatch] = useStateValue();
 	let history = useHistory();
 
-	const onSubmit = async data => {
+	const onSubmit = async (data) => {
 		try {
 			let res = await axios.post('/api/auth/login', {
 				email: data.email,
-				password: data.password
+				password: data.password,
 			});
-
-			console.log(res);
 
 			dispatch({
 				type: 'authSuccess',
 				authenticated: true,
 				resToken: res.data.token,
 				setUsername: res.data.user.username,
-				setId: res.data.user._id
+				setId: res.data.user._id,
 			});
 
 			history.push('/');

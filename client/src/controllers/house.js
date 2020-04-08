@@ -33,9 +33,6 @@ exports.index = async function(req, res) {
 		req.query.sort_order && req.query.sort_order === 'desc' ? -1 : 1;
 	aggregate_options.push({ $sort: { 'data.start_date': sortOrder } });
 
-	//LOOKUP/JOIN -- FOURTH STAGE
-	// aggregate_options.push({$lookup: {from: 'interested', localField: "_id", foreignField: "eventId", as: "interested"}});
-
 	//  aggregation
 	const myAggregate = House.aggregate(aggregate_options);
 	const result = await House.aggregatePaginate(myAggregate, options);
@@ -56,7 +53,7 @@ exports.store = async (req, res) => {
 		if (!req.file)
 			return res.status(200).json({ house, message: 'House added' });
 
-		//upload to cloud
+		//upload to mongo
 		const result = await uploader(req);
 		const house_ = await House.findByIdAndUpdate(
 			house._id,

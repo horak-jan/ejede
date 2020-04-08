@@ -3,6 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import '../styles/styles.css';
+import { StateProvider } from '../state';
+
 import Home from '../views/Home';
 import Footer from '../views/Footer';
 import Login from '../views/Login';
@@ -11,8 +13,7 @@ import Host from '../views/Host';
 import Help from '../views/Help';
 import User from '../views/User';
 import Navbar from '../components/ui/Navbar';
-
-import { StateProvider } from '../state';
+import Browse from '../views/Browse';
 
 const App = () => {
 	const initialState = {
@@ -78,6 +79,7 @@ const App = () => {
 						<Route exact path='/register' component={Register} />
 						<Route exact path='/login' component={Login} />
 						<Route exact path='/user' component={User} />
+						<Route exact path='/browse' component={Browse} />
 						<Route exact path='/' component={Home} />
 					</Switch>
 					<Footer />

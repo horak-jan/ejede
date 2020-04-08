@@ -5,7 +5,7 @@
 }
 
 nav {
-	width: 100vw;
+	width: 100%;
 	height: 10vh;
 	ul {
 		float: right;
@@ -32,6 +32,7 @@ nav {
 	min-height: 70vh;
 	text-align: center;
 	padding: 2vh 3vw;
+
 	p {
 		margin-top: 7vh;
 		margin-bottom: 7vh;
@@ -92,7 +93,38 @@ nav {
 		float: left;
 	}
 }
-
+.browse {
+	width: 80vw;
+	margin: 5vh auto;
+	min-height: 60vh;
+	.houseWrapper {
+		display: flex;
+		flex-wrap: wrap;
+		.singleHouse {
+			width: 20vw;
+			height: 20vh;
+			margin: 2vh;
+			flex: 1;
+			img {
+				height: 10vh;
+				width: 10vw;
+			}
+		}
+	}
+	.browse-buttons {
+		margin: 10vh auto 5vh;
+		width: 40vw;
+		display: flex;
+		button {
+			flex: 1;
+			justify-content: space-around;
+			width: 5vw;
+			background: transparent;
+			height: 5vh;
+			font-size: 1.2rem;
+		}
+	}
+}
 .auth-wrapp {
 	padding: 10vh 0;
 	.auth-main {
@@ -220,7 +252,7 @@ nav {
 	}
 	.footer {
 		width: 90%;
-		padding: 2vh 5%;
+		padding: 2vh 2vw;
 		.footer-head {
 			font-weight: 600;
 			margin-bottom: 2vh;
@@ -265,6 +297,7 @@ nav {
 			border: 1px solid black;
 			border-radius: 5px;
 			padding-top: 4vh;
+
 			.home-picker {
 				.picker,
 				.picker-second {
@@ -320,7 +353,10 @@ nav {
 			display: none;
 		}
 	}
-
+	.home {
+		position: relative;
+		left: 15vw;
+	}
 	.mid-bot {
 		img {
 			width: 40vw !important;
