@@ -9,7 +9,7 @@ const Host = () => {
 				<div>
 					<h3>Why host on Ova-bnb?</h3>
 					<p>
-						No matter what kind of home or room you have to share, Airbnb makes
+						No matter what kind of home or room you have to share, Ovabnb makes
 						it simple and secure to host travelers. You’re in full control of
 						your availability, prices, house rules, and how you interact with
 						guests.
@@ -51,7 +51,7 @@ const Host = () => {
 			<div className='mid-bot'>
 				<img src={host} />
 				<p>
-					The Host Guarantee helped me decide to join Airbnb because I have it
+					The Host Guarantee helped me decide to join Ovabnb because I have it
 					to fall back on if there's damage or problems.
 				</p>
 				<p className='small-print'>
@@ -63,7 +63,7 @@ const Host = () => {
 				<h2>We have got you covered</h2>
 				<p>
 					We know it’s a priority to trust the people staying in your home.
-					Airbnb allows you to set strict requirements for who can book and to
+					Ovabnb allows you to set strict requirements for who can book and to
 					get to know guests before their stay.
 				</p>
 				<p>

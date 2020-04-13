@@ -94,20 +94,50 @@ nav {
 	}
 }
 .browse {
-	width: 80vw;
+	width: 95vw;
 	margin: 5vh auto;
 	min-height: 60vh;
 	.houseWrapper {
-		display: flex;
-		flex-wrap: wrap;
 		.singleHouse {
-			width: 20vw;
-			height: 20vh;
-			margin: 2vh;
-			flex: 1;
+			h4,
+			p {
+				margin-left: 5vw;
+			}
+			.flex-offer,
+			.flex-offer-second {
+				display: flex;
+				p {
+					flex: 1;
+				}
+				button {
+					padding: 6px 15px;
+					border-radius: 10px;
+					border: 1px solid black;
+					background-color: transparent;
+					a {
+						text-decoration: none;
+						color: black;
+						font-size: 1.1rem;
+						&:hover {
+							text-decoration: underline;
+							color: rgb(255, 95, 90);
+						}
+					}
+				}
+			}
+
+			width: 90vw;
+			height: 38vh;
+			margin-bottom: 3vh;
+			font-size: 1.1rem;
+			.price {
+				font-weight: 400;
+			}
 			img {
-				height: 10vh;
-				width: 10vw;
+				display: block;
+				margin: 1vh auto;
+				height: 24vh;
+				width: 85vw;
 			}
 		}
 	}
@@ -122,6 +152,7 @@ nav {
 			background: transparent;
 			height: 5vh;
 			font-size: 1.2rem;
+			border: none;
 		}
 	}
 }
@@ -330,6 +361,33 @@ nav {
 			margin-top: 8vh;
 		}
 	}
+
+	.browse {
+		.houseWrapper {
+			.singleHouse {
+				margin-bottom: 1vh;
+				img {
+					height: 80%;
+					width: 40vw;
+					margin: 1vh 1vw;
+				}
+				.singleHouseContent {
+					position: relative;
+					top: -25vh;
+					left: 38vw;
+					width: 50vw;
+
+					h4,
+					p {
+						margin-top: 2vh;
+					}
+					.flex-offer-second {
+						display: block;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 900px) {
@@ -356,6 +414,7 @@ nav {
 	.home {
 		position: relative;
 		left: 15vw;
+		width: 70vw;
 	}
 	.mid-bot {
 		img {
@@ -370,6 +429,29 @@ nav {
 		}
 		button {
 			width: 19vw !important;
+		}
+	}
+	.browse {
+		.houseWrapper {
+			display: flex;
+			.singleHouse {
+				h4,
+				p {
+					margin-left: 0;
+				}
+				flex: 1;
+				width: 15vw;
+				height: 40vh;
+				img {
+					width: 15vw;
+					height: 15vh;
+					margin: 0;
+				}
+				.singleHouseContent {
+					position: static;
+					width: 15vw;
+				}
+			}
 		}
 	}
 }

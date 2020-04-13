@@ -14,6 +14,7 @@ import Help from '../views/Help';
 import User from '../views/User';
 import Navbar from '../components/ui/Navbar';
 import Browse from '../views/Browse';
+import House from '../views/House';
 
 const App = () => {
 	const initialState = {
@@ -21,14 +22,14 @@ const App = () => {
 			isAuthenticated: false,
 			token: '',
 			username: '',
-			id: ''
+			id: '',
 		},
 		bookingDate: {
 			startDate: Date,
 			endDate: Date,
 			adults: 0,
-			kids: 0
-		}
+			kids: 0,
+		},
 	};
 
 	const reducer = (state, action) => {
@@ -40,8 +41,8 @@ const App = () => {
 						isAuthenticated: action.authenticated,
 						token: action.resToken,
 						username: action.setUsername,
-						id: action.setId
-					}
+						id: action.setId,
+					},
 				};
 			case 'logout':
 				return {
@@ -50,8 +51,8 @@ const App = () => {
 						isAuthenticated: action.authenticated,
 						token: action.resToken,
 						username: action.setUsername,
-						id: action.setId
-					}
+						id: action.setId,
+					},
 				};
 			case 'bookDate':
 				return {
@@ -60,8 +61,8 @@ const App = () => {
 						startDate: action.setStartDate,
 						endDate: action.setEndDate,
 						adults: action.setAdults,
-						kids: action.setKids
-					}
+						kids: action.setKids,
+					},
 				};
 			default:
 				return state;
@@ -80,6 +81,7 @@ const App = () => {
 						<Route exact path='/login' component={Login} />
 						<Route exact path='/user' component={User} />
 						<Route exact path='/browse' component={Browse} />
+						<Route exact path='/house' component={House} />
 						<Route exact path='/' component={Home} />
 					</Switch>
 					<Footer />

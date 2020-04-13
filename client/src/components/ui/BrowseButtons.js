@@ -14,7 +14,9 @@ const BrowseButtons = (props) => {
 						{number}
 					</button>
 				) : (
-					<button key={number}>{number}</button>
+					<button onClick={() => props.setPage(number)} key={number}>
+						{number}
+					</button>
 				)
 			)}
 		</div>

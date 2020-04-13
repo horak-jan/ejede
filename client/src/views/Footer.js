@@ -9,7 +9,7 @@ const Footer = () => {
 					<li>Diversity & Belonging</li>
 					<li>Accessibility</li>
 					<li>Trust & Safety</li>
-					<li>Airbnb Citizen</li>
+					<li>Ovabnb Citizen</li>
 					<li>Newsroom</li>
 				</ul>
 			</div>
@@ -17,8 +17,8 @@ const Footer = () => {
 			<div className='footer-large'>
 				<div className='footer-head'>COMMUNITY</div>
 				<ul className='one-fourth'>
-					<li>Airbnb Magazine</li>
-					<li>Airbnb for Work</li>
+					<li>Ovabnb Magazine</li>
+					<li>Ovabnb for Work</li>
 					<li>Invite friends</li>
 					<li>Gift cards</li>
 					<li>Careers</li>

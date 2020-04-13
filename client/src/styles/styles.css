@@ -121,31 +121,67 @@ nav ul li:hover {
 }
 
 .browse {
-  width: 80vw;
+  width: 95vw;
   margin: 5vh auto;
   min-height: 60vh;
 }
 
-.browse .houseWrapper {
+.browse .houseWrapper .singleHouse {
+  width: 90vw;
+  height: 38vh;
+  margin-bottom: 3vh;
+  font-size: 1.1rem;
+}
+
+.browse .houseWrapper .singleHouse h4,
+.browse .houseWrapper .singleHouse p {
+  margin-left: 5vw;
+}
+
+.browse .houseWrapper .singleHouse .flex-offer,
+.browse .houseWrapper .singleHouse .flex-offer-second {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-.browse .houseWrapper .singleHouse {
-  width: 20vw;
-  height: 20vh;
-  margin: 2vh;
+.browse .houseWrapper .singleHouse .flex-offer p,
+.browse .houseWrapper .singleHouse .flex-offer-second p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
+.browse .houseWrapper .singleHouse .flex-offer button,
+.browse .houseWrapper .singleHouse .flex-offer-second button {
+  padding: 6px 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.browse .houseWrapper .singleHouse .flex-offer button a,
+.browse .houseWrapper .singleHouse .flex-offer-second button a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.browse .houseWrapper .singleHouse .flex-offer button a:hover,
+.browse .houseWrapper .singleHouse .flex-offer-second button a:hover {
+  text-decoration: underline;
+  color: #ff5f5a;
+}
+
+.browse .houseWrapper .singleHouse .price {
+  font-weight: 400;
+}
+
 .browse .houseWrapper .singleHouse img {
-  height: 10vh;
-  width: 10vw;
+  display: block;
+  margin: 1vh auto;
+  height: 24vh;
+  width: 85vw;
 }
 
 .browse .browse-buttons {
@@ -166,6 +202,7 @@ nav ul li:hover {
   background: transparent;
   height: 5vh;
   font-size: 1.2rem;
+  border: none;
 }
 
 .auth-wrapp {
@@ -376,6 +413,27 @@ nav ul li:hover {
     height: 50px;
     margin-top: 8vh;
   }
+  .browse .houseWrapper .singleHouse {
+    margin-bottom: 1vh;
+  }
+  .browse .houseWrapper .singleHouse img {
+    height: 80%;
+    width: 40vw;
+    margin: 1vh 1vw;
+  }
+  .browse .houseWrapper .singleHouse .singleHouseContent {
+    position: relative;
+    top: -25vh;
+    left: 38vw;
+    width: 50vw;
+  }
+  .browse .houseWrapper .singleHouse .singleHouseContent h4,
+  .browse .houseWrapper .singleHouse .singleHouseContent p {
+    margin-top: 2vh;
+  }
+  .browse .houseWrapper .singleHouse .singleHouseContent .flex-offer-second {
+    display: block;
+  }
 }
 
 @media (min-width: 900px) {
@@ -406,6 +464,7 @@ nav ul li:hover {
   .home {
     position: relative;
     left: 15vw;
+    width: 70vw;
   }
   .mid-bot img {
     width: 40vw !important;
@@ -419,6 +478,31 @@ nav ul li:hover {
   }
   .mid-bot button {
     width: 19vw !important;
+  }
+  .browse .houseWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .browse .houseWrapper .singleHouse {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 15vw;
+    height: 40vh;
+  }
+  .browse .houseWrapper .singleHouse h4,
+  .browse .houseWrapper .singleHouse p {
+    margin-left: 0;
+  }
+  .browse .houseWrapper .singleHouse img {
+    width: 15vw;
+    height: 15vh;
+    margin: 0;
+  }
+  .browse .houseWrapper .singleHouse .singleHouseContent {
+    position: static;
+    width: 15vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

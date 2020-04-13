@@ -6,75 +6,72 @@ const HouseSchema = new mongoose.Schema(
 		userId: {
 			type: mongoose.Schema.Types.ObjectId,
 			required: true,
-			ref: 'User'
+			ref: 'User',
 		},
 
 		title: {
 			type: String,
-			required: 'House name is required'
+			required: 'House name is required',
 		},
 
 		city: {
 			type: String,
 			required: true,
-			default: 'Ostrava'
+			default: 'Ostrava',
 		},
 
 		address: {
 			type: String,
-			required: true
+			required: true,
 		},
 		guests: {
 			type: Number,
-			required: true
+			required: true,
 		},
 		bedrooms: {
 			type: Number,
-			required: true
+			required: true,
 		},
 		beds: {
 			type: Number,
-			required: true
+			required: true,
 		},
 		baths: {
 			type: Number,
-			required: true
+			required: true,
 		},
 		price: {
 			type: Number,
-			required: true
+			required: true,
 		},
 		wifi: {
-			type: Boolean
+			type: Boolean,
 		},
 		ac: {
-			type: Boolean
+			type: Boolean,
 		},
 		washingMashine: {
-			type: Boolean
+			type: Boolean,
 		},
 		pets: {
-			type: Boolean
+			type: Boolean,
 		},
 		tv: {
-			type: Boolean
+			type: Boolean,
 		},
 		smoking: {
-			type: Boolean
-		},
-		smoking: {
-			type: Boolean
+			type: Boolean,
 		},
 		kitchen: {
-			type: Boolean
+			type: Boolean,
 		},
 		description: {
 			type: String,
 			required: true,
-			max: 255
+			max: 255,
 		},
 
-		image: [String]
+		image: [String],
 	},
 	{ timestamps: true }
 );
