@@ -1,4 +1,4 @@
-// testing
+// for seeding
 const faker = require('faker');
 
 const User = require('../models/user');
@@ -10,7 +10,7 @@ const limit_ = 5;
 // GET api/house
 //  Returns all houses with pagination
 
-exports.index = async function(req, res) {
+exports.index = async function (req, res) {
 	let aggregate_options = [];
 
 	//pagination
@@ -24,8 +24,8 @@ exports.index = async function(req, res) {
 		collation: { locale: 'cz' },
 		customLabels: {
 			totalDocs: 'totalResults',
-			docs: 'houses'
-		}
+			docs: 'houses',
+		},
 	};
 
 	//sorting
@@ -67,10 +67,10 @@ exports.store = async (req, res) => {
 	}
 };
 
-//  GET api/house/{id}
+//  GET api/house/:id
 //  get a single house
 
-exports.show = async function(req, res) {
+exports.show = async function (req, res) {
 	try {
 		const id = req.params.id;
 
@@ -90,7 +90,7 @@ exports.show = async function(req, res) {
 //  PUT api/house/{id}
 //  Update house info
 
-exports.update = async function(req, res) {
+exports.update = async function (req, res) {
 	try {
 		const update = req.body;
 		const id = req.params.id;
@@ -127,7 +127,7 @@ exports.update = async function(req, res) {
 //  DESTROY api/house/{id}
 //  Delete house
 
-exports.destroy = async function(req, res) {
+exports.destroy = async function (req, res) {
 	try {
 		const id = req.params.id;
 		const userId = req.user._id;
@@ -143,17 +143,13 @@ exports.destroy = async function(req, res) {
 /**
  * Seed the db
  */
-exports.seed = async function(req, res) {
+exports.seed = async function (req, res) {
 	try {
 		let ids = [];
 		let houses = [];
 
 		for (let i = 0; i < 5; i++) {
-			const password =
-				'_' +
-				Math.random()
-					.toString(36)
-					.substr(2, 9); //generate a random password
+			const password = '_' + Math.random().toString(36).substr(2, 9); //generate a random password
 			let newUser = new User({
 				email: faker.internet.email(),
 				password,
@@ -162,7 +158,7 @@ exports.seed = async function(req, res) {
 				lastName: `${faker.name.lastName()}`,
 				isVerified: true,
 				bio: faker.lorem.paragraph(),
-				profileImage: faker.image.avatar()
+				profileImage: faker.image.avatar(),
 			});
 
 			const user = await newUser.save();
@@ -188,7 +184,7 @@ exports.seed = async function(req, res) {
 					washingMachine: faker.random.boolean(),
 					smoking: faker.random.boolean(),
 					tv: faker.random.boolean(),
-					userId: ids[i]
+					userId: ids[i],
 				});
 
 				let house = await newHouse.save();

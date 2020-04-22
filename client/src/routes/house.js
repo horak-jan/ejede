@@ -20,18 +20,12 @@ router.post(
 	'/',
 	upload,
 	[
-		check('name')
-			.not()
-			.isEmpty()
-			.withMessage('House name is required'),
-		check('address')
-			.not()
-			.isEmpty()
-			.withMessage('House location is required'),
+		check('name').not().isEmpty().withMessage('House name is required'),
+		check('address').not().isEmpty().withMessage('House location is required'),
 		check('description')
 			.not()
 			.isEmpty()
-			.withMessage('House description is required')
+			.withMessage('House description is required'),
 	],
 	validate,
 	House.store

@@ -1,6 +1,26 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
+import { useStateValue } from '../../state';
 
 const SingleHouse = (props) => {
+	const [{ selectedHouse }, dispatch] = useStateValue();
+	let history = useHistory();
+
+	const pickThisHouse = async (data) => {
+		try {
+			dispatch({
+				type: 'pickHouse',
+				setHouse: data,
+			});
+
+			//redirect
+			history.push('/house');
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	return (
 		<div className='singleHouse'>
 			<img src={props.house.image[0]} />
@@ -17,8 +37,8 @@ const SingleHouse = (props) => {
 				<div className='flex-offer-second'>
 					<p>{props.house.price}Kč / noc</p>
 					<p>
-						<button>
-							<a href={`/house?${props.house._id}`}>Více informací</a>
+						<button onClick={() => pickThisHouse(props.house)}>
+							Více informací
 						</button>
 					</p>
 				</div>

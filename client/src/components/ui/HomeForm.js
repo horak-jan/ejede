@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-date-picker';
 import { useForm } from 'react-hook-form';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { useStateValue } from '../../state';
 
@@ -19,16 +19,17 @@ const HomeForm = () => {
 	const [{ bookingDate }, dispatch] = useStateValue();
 	let history = useHistory();
 
-	const onSubmit = async data => {
+	const onSubmit = async (data) => {
 		try {
 			dispatch({
 				type: 'bookDate',
 				setStartDate: startDate,
 				setEndDate: endDate,
 				setAdults: data.adults,
-				setKids: data.kids
+				setKids: data.kids,
 			});
 
+			//redirect
 			history.push('/browse');
 		} catch (error) {
 			console.log(error);

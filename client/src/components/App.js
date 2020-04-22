@@ -15,6 +15,7 @@ import User from '../views/User';
 import Navbar from '../components/ui/Navbar';
 import Browse from '../views/Browse';
 import House from '../views/House';
+import FourOhFour from '../views/FourOhFour';
 
 const App = () => {
 	const initialState = {
@@ -29,6 +30,9 @@ const App = () => {
 			endDate: Date,
 			adults: 0,
 			kids: 0,
+		},
+		selectedHouse: {
+			singleHouse: {},
 		},
 	};
 
@@ -64,6 +68,11 @@ const App = () => {
 						kids: action.setKids,
 					},
 				};
+			case 'pickHouse':
+				return {
+					...state,
+					selectedHouse: action.setHouse,
+				};
 			default:
 				return state;
 		}
@@ -83,6 +92,7 @@ const App = () => {
 						<Route exact path='/browse' component={Browse} />
 						<Route exact path='/house' component={House} />
 						<Route exact path='/' component={Home} />
+						<Route exact path='/*' component={FourOhFour} />
 					</Switch>
 					<Footer />
 				</div>

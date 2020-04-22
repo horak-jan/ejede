@@ -39,6 +39,7 @@
 		"passport": "^0.4.1",
 		"passport-jwt": "^4.0.0",
 		"pug": "^2.0.4",
+		"pure-react-carousel": "1.27.0",
 		"react": "16.13.0",
 		"react-date-picker": "8.0.0",
 		"react-dom": "16.13.0",

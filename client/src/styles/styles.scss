@@ -75,6 +75,22 @@ nav {
 	}
 }
 
+.fourOhfour {
+	min-height: 70vh;
+	width: 70vw;
+	font-size: 1.3rem;
+	margin: 5vh auto;
+	h2 {
+		margin-bottom: 10vh;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
 .footer {
 	width: 60%;
 	margin: 5vh auto;
@@ -275,6 +291,29 @@ nav {
 	padding-top: 10vh;
 }
 
+.houseView {
+	min-height: 70vh;
+	width: 100%;
+	.houseMain {
+		width: 80vw;
+		margin: 1vh auto;
+		h2 {
+			margin-top: 5vh;
+		}
+
+		.houseInfo {
+			width: 70vw;
+			.details {
+				width: 60vw;
+				display: flex;
+				p {
+					width: 50%;
+					flex: 1;
+				}
+			}
+		}
+	}
+}
 @media (min-width: 650px) {
 	.host {
 		padding: 10vh 10vw;
@@ -434,6 +473,7 @@ nav {
 	.browse {
 		.houseWrapper {
 			display: flex;
+			min-height: 46vh;
 			.singleHouse {
 				h4,
 				p {
@@ -450,6 +490,23 @@ nav {
 				.singleHouseContent {
 					position: static;
 					width: 15vw;
+					.flex-offer {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+//large screens
+
+@media (min-width: 900px) {
+	.browse {
+		.houseWrapper {
+			.singleHouseContent {
+				.flex-offer {
+					display: block;
 				}
 			}
 		}

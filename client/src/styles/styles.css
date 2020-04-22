@@ -96,6 +96,25 @@ nav ul li:hover {
   border: 1px solid black;
 }
 
+.fourOhfour {
+  min-height: 70vh;
+  width: 70vw;
+  font-size: 1.3rem;
+  margin: 5vh auto;
+}
+
+.fourOhfour h2 {
+  margin-bottom: 10vh;
+}
+
+.fourOhfour a {
+  text-decoration: none;
+}
+
+.fourOhfour a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   width: 60%;
   margin: 5vh auto;
@@ -344,6 +363,38 @@ nav ul li:hover {
   padding-top: 10vh;
 }
 
+.houseView {
+  min-height: 70vh;
+  width: 100%;
+}
+
+.houseView .houseMain {
+  width: 80vw;
+  margin: 1vh auto;
+}
+
+.houseView .houseMain h2 {
+  margin-top: 5vh;
+}
+
+.houseView .houseMain .houseInfo {
+  width: 70vw;
+}
+
+.houseView .houseMain .houseInfo .details {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.houseView .houseMain .houseInfo .details p {
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 @media (min-width: 650px) {
   .host {
     padding: 10vh 10vw;
@@ -483,6 +534,7 @@ nav ul li:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    min-height: 46vh;
   }
   .browse .houseWrapper .singleHouse {
     -webkit-box-flex: 1;
@@ -503,6 +555,15 @@ nav ul li:hover {
   .browse .houseWrapper .singleHouse .singleHouseContent {
     position: static;
     width: 15vw;
+  }
+  .browse .houseWrapper .singleHouse .singleHouseContent .flex-offer {
+    display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .browse .houseWrapper .singleHouseContent .flex-offer {
+    display: block;
   }
 }
 /*# sourceMappingURL=styles.css.map */
