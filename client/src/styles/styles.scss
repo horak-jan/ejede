@@ -112,9 +112,20 @@ nav {
 .browse {
 	width: 95vw;
 	margin: 5vh auto;
-	min-height: 60vh;
+	min-height: 198vh;
+
+	h2 {
+		margin-left: 3vw;
+	}
 	.houseWrapper {
+		margin: 2vh auto;
+		padding: 0 2vw;
+		width: 90vw;
+		height: 38vh;
+		font-size: 1.1rem;
+
 		.singleHouse {
+			margin-bottom: 2vh;
 			h4,
 			p {
 				margin-left: 5vw;
@@ -142,10 +153,6 @@ nav {
 				}
 			}
 
-			width: 90vw;
-			height: 38vh;
-			margin-bottom: 3vh;
-			font-size: 1.1rem;
 			.price {
 				font-weight: 400;
 			}
@@ -161,6 +168,8 @@ nav {
 		margin: 10vh auto 5vh;
 		width: 40vw;
 		display: flex;
+		position: relative;
+		top: 140vh;
 		button {
 			flex: 1;
 			justify-content: space-around;
@@ -300,7 +309,14 @@ nav {
 		h2 {
 			margin-top: 5vh;
 		}
-
+		.smallText {
+			display: flex;
+			p {
+				flex: 1;
+				font-size: 0.8rem;
+				color: rgb(87, 84, 84);
+			}
+		}
 		.houseInfo {
 			width: 70vw;
 			.details {
@@ -402,9 +418,11 @@ nav {
 	}
 
 	.browse {
+		min-height: 165vh;
 		.houseWrapper {
 			.singleHouse {
 				margin-bottom: 1vh;
+				height: 30vh;
 				img {
 					height: 80%;
 					width: 40vw;
@@ -425,6 +443,9 @@ nav {
 					}
 				}
 			}
+		}
+		.browse-buttons {
+			top: 105vh;
 		}
 	}
 }
@@ -471,6 +492,7 @@ nav {
 		}
 	}
 	.browse {
+		min-height: 65vh;
 		.houseWrapper {
 			display: flex;
 			min-height: 46vh;
@@ -496,19 +518,8 @@ nav {
 				}
 			}
 		}
-	}
-}
-
-//large screens
-
-@media (min-width: 900px) {
-	.browse {
-		.houseWrapper {
-			.singleHouseContent {
-				.flex-offer {
-					display: block;
-				}
-			}
+		.browse-buttons {
+			top: 0;
 		}
 	}
 }

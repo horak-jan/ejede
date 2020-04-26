@@ -142,14 +142,23 @@ nav ul li:hover {
 .browse {
   width: 95vw;
   margin: 5vh auto;
-  min-height: 60vh;
+  min-height: 198vh;
+}
+
+.browse h2 {
+  margin-left: 3vw;
+}
+
+.browse .houseWrapper {
+  margin: 2vh auto;
+  padding: 0 2vw;
+  width: 90vw;
+  height: 38vh;
+  font-size: 1.1rem;
 }
 
 .browse .houseWrapper .singleHouse {
-  width: 90vw;
-  height: 38vh;
-  margin-bottom: 3vh;
-  font-size: 1.1rem;
+  margin-bottom: 2vh;
 }
 
 .browse .houseWrapper .singleHouse h4,
@@ -209,6 +218,8 @@ nav ul li:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  top: 140vh;
 }
 
 .browse .browse-buttons button {
@@ -377,6 +388,20 @@ nav ul li:hover {
   margin-top: 5vh;
 }
 
+.houseView .houseMain .smallText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.houseView .houseMain .smallText p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.8rem;
+  color: #575454;
+}
+
 .houseView .houseMain .houseInfo {
   width: 70vw;
 }
@@ -464,8 +489,12 @@ nav ul li:hover {
     height: 50px;
     margin-top: 8vh;
   }
+  .browse {
+    min-height: 165vh;
+  }
   .browse .houseWrapper .singleHouse {
     margin-bottom: 1vh;
+    height: 30vh;
   }
   .browse .houseWrapper .singleHouse img {
     height: 80%;
@@ -484,6 +513,9 @@ nav ul li:hover {
   }
   .browse .houseWrapper .singleHouse .singleHouseContent .flex-offer-second {
     display: block;
+  }
+  .browse .browse-buttons {
+    top: 105vh;
   }
 }
 
@@ -530,6 +562,9 @@ nav ul li:hover {
   .mid-bot button {
     width: 19vw !important;
   }
+  .browse {
+    min-height: 65vh;
+  }
   .browse .houseWrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -559,11 +594,8 @@ nav ul li:hover {
   .browse .houseWrapper .singleHouse .singleHouseContent .flex-offer {
     display: block;
   }
-}
-
-@media (min-width: 900px) {
-  .browse .houseWrapper .singleHouseContent .flex-offer {
-    display: block;
+  .browse .browse-buttons {
+    top: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

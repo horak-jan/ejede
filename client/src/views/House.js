@@ -35,8 +35,13 @@ const House = () => {
 				<h2>{title}</h2>
 				<p>{address}</p>
 				<p>{city}</p>
-				<p>{guests}</p>
-				<p>{bedrooms}</p>
+				<div className='smallText'>
+					<p>{guests}</p>
+					<p>{bedrooms}</p>
+					<p>{baths}</p>
+					<p>{beds}</p>
+				</div>
+				<hr />
 				<div className='houseInfo'>
 					<p>{description}</p>
 					<div className='details'>
@@ -45,8 +50,6 @@ const House = () => {
 						<p>{kitchen}</p>
 						<p>{ac}</p>
 						<p>{smoking}</p>
-						<p>{baths}</p>
-						<p>{beds}</p>
 						<p>{wifi}</p>
 					</div>
 				</div>
