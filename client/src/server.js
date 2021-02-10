@@ -1,12 +1,13 @@
-require('dotenv').config({ path: __dirname + '/.env' });
+require("dotenv").config({ path: __dirname + "/.env" });
 
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const passport = require('passport');
-const path = require('path');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const path = require("path");
+// const config = require("../src/utils/index");
+const { auth } = require("express-openid-connect");
 
-const DIST_DIR = path.resolve('public/build/');
+const DIST_DIR = path.resolve("public/build/");
 
 // port
 const connUri = process.env.MONGO_URI;
@@ -24,43 +25,50 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //form-urlencoded
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASEURL,
+  clientID: process.env.CLIENTID,
+  issuerBaseURL: process.env.ISSUERBASEURL,
+};
+// auth
+app.use(auth(config));
+
+// views setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 
 //mongoose promise -> global promise
 mongoose.promise = global.Promise;
 mongoose.connect(connUri, {
-	useNewUrlParser: true,
-	useCreateIndex: true,
-	useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
 });
 
 const connection = mongoose.connection;
-connection.once('open', () => console.log('MongoDB --  database connected'));
-connection.on('error', (err) => {
-	console.log('MongoDB connection error. ' + err);
-	process.exit();
+connection.once("open", () => console.log("MongoDB --  database connected"));
+connection.on("error", (err) => {
+  console.log("MongoDB connection error. " + err);
+  process.exit();
 });
 
-//PASSPORT MIDDLEWARE
-app.use(passport.initialize());
-require('./middlewares/jwt')(passport);
-
 //Configure Route
-require('./routes/index')(app);
+require("./routes/index")(app);
 
 app.use(express.static(DIST_DIR));
 
 //catch-all for SSR
-app.get('/*', function (req, res) {
-	res.sendFile(path.join(DIST_DIR, '/index.html'), function (err) {
-		if (err) {
-			res.status(500).send(err);
-		}
-	});
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(DIST_DIR, "/index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 app.listen(PORT, () =>
-	console.log('Server running on http://localhost:' + PORT + '/')
+  console.log("Server running on http://localhost:" + PORT + "/")
 );
