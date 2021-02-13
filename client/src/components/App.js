@@ -29,6 +29,10 @@ const App = () => {
     bookingDate: {
       startDate: Date,
       endDate: Date,
+      startTime: "",
+      endTime: "",
+      pickUp: "",
+      dropOff: "",
       adults: 0,
       kids: 0,
     },
@@ -65,8 +69,8 @@ const App = () => {
           bookingDate: {
             startDate: action.setStartDate,
             endDate: action.setEndDate,
-            adults: action.setAdults,
-            kids: action.setKids,
+            startTime: action.setStartTime,
+            endTime: action.setEndTime,
           },
         };
       case "pickHouse":

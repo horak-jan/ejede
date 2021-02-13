@@ -4,7 +4,8 @@ const { auth } = require("express-openid-connect");
 const { requiresAuth } = require("express-openid-connect");
 
 // const user = require("./user");
-const house = require("./house");
+const booking = require("./booking");
+const car = require("./car");
 
 module.exports = (app) => {
   app.get("/", (req, res) => {
@@ -12,15 +13,12 @@ module.exports = (app) => {
     // res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
   });
 
-  //protected routes
-  app.get("/profile", requiresAuth(), (req, res) => {
-    res.send(JSON.stringify(req.oidc.user));
-  });
-
+  app.use("/api/car", car);
+  app.use("/api/booking", booking);
   // app.use('/api/auth', auth);
   // app.use("/api/user", auth, user);
-  app.use("/api/house", house);
-  app.get("/admin", requiresAuth(), (req, res) =>
-    res.send(`Hello ${req.oidc.user.sub}, this is the admin section.`)
-  );
+  // app.use("/api/house", house);
+  // app.get("/admin", requiresAuth(), (req, res) =>
+  //   res.send(`Hello ${req.oidc.user.sub}, this is the admin section.`)
+  // );
 };

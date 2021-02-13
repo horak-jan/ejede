@@ -8,6 +8,8 @@ const HomeThird = () => {
       <Faq />
       <Faq />
       <Faq />
+      <Faq />
+      <Faq />
     </div>
   );
 };

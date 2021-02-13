@@ -33,10 +33,10 @@ nav {
 // home page
 // mobile
 .home {
-  background-image: url("../images/small-home-top.jpg");
-  background-repeat: no-repeat;
+  // background-image: url("../images/small-home-top.jpg");
+  // background-repeat: no-repeat;
 
-  width: 100vw;
+  max-width: 1005px;
   min-height: 70vh;
   text-align: center;
 
@@ -52,12 +52,10 @@ nav {
       position: relative;
       text-align: center;
       top: 5vh;
-      color: white;
     }
     p {
       margin-top: 7vh;
       margin-bottom: 7vh;
-      color: white;
     }
     .home-picker {
       display: flex;
@@ -105,7 +103,7 @@ nav {
     padding-top: 5vh;
     border-radius: 16px 16px 0 0;
     text-align: center;
-    margin-bottom: 5vh;
+    padding-bottom: 5vh;
 
     h2 {
       margin-top: 3vh;
@@ -121,7 +119,7 @@ nav {
       overflow: hidden;
       padding-top: 9px;
       border-bottom: 1px solid transparent;
-      width: 80vw;
+      width: 280px;
       margin: 0 auto 10px;
       display: flex;
       justify-content: space-around;
@@ -146,7 +144,7 @@ nav {
 
           button {
             margin: 1vh 0;
-            border-radius: 10px;
+            border-radius: 5px;
             width: 25vw;
             height: 4vh;
             color: white;
@@ -163,8 +161,8 @@ nav {
           margin-top: 4vh;
 
           img {
-            height: 70%;
-            width: 80%;
+            height: 80%;
+            width: 90%;
             float: right;
           }
         }
@@ -179,13 +177,13 @@ nav {
     text-align: center;
     margin-bottom: 5vh;
 
+    h3 {
+      margin-bottom: 2vh;
+    }
+
     .home-third-faq {
       width: 80vw;
       margin: 0 auto 10px;
-
-      h3 {
-        margin-bottom: 2vh;
-      }
 
       .home-third-faq-title {
         font-weight: 600;
@@ -198,6 +196,10 @@ nav {
         cursor: pointer;
         align-items: center;
         border-bottom: 1px solid grey;
+
+        h4 {
+          width: 70vw;
+        }
       }
 
       .home-third-faq-text {
@@ -208,36 +210,10 @@ nav {
   }
 }
 
-// ctvrty dil homepage
-.home-fourth {
-  background-color: #f0f4fa;
-  position: relative;
-  top: 20vh;
-  min-height: 60vh;
-  width: 100vw;
-  text-align: center;
-  border-radius: 16px 16px 0 0;
-  padding-top: 5vh;
-  margin-bottom: 20vh;
-
-  h3 {
-    margin: 2vh auto;
-  }
-
-  .home-second-text {
-    // width: 90vw;
-    border-radius: 7%;
-
-    .circle {
-      margin: 3vh auto;
-      text-align: center;
-      border: 1px white solid;
-      border-radius: 50%;
-      height: 50px;
-      width: 50px;
-      line-height: 50px;
-    }
-  }
+//browse page
+//mobile
+.browse {
+  background-color: #424242;
 }
 
 // 404
@@ -245,7 +221,7 @@ nav {
   min-height: 70vh;
   width: 70vw;
   font-size: 1.3rem;
-  margin: 5vh auto;
+  margin: 15vh auto;
   h2 {
     margin-bottom: 10vh;
   }
@@ -263,7 +239,7 @@ nav {
   width: 60%;
   margin: 5vh auto;
   padding-top: 2vh;
-  border-top: 1px solid grey;
+  // border-top: 1px solid grey;
   .footer-head {
     display: none;
   }
@@ -274,84 +250,11 @@ nav {
   }
   .footer-bottom {
     font-size: 0.8rem;
-    float: left;
+    text-align: center;
   }
 }
 
-// prohlizeni vysledku
 // mobile
-.browse {
-  width: 95vw;
-  margin: 5vh auto;
-  min-height: 198vh;
-
-  h2 {
-    margin-left: 3vw;
-  }
-  .houseWrapper {
-    margin: 2vh auto;
-    padding: 0 2vw;
-    width: 90vw;
-    height: 38vh;
-    font-size: 1.1rem;
-
-    .singleHouse {
-      margin-bottom: 2vh;
-      h4,
-      p {
-        margin-left: 5vw;
-      }
-      .flex-offer,
-      .flex-offer-second {
-        display: flex;
-        p {
-          flex: 1;
-        }
-        button {
-          padding: 6px 15px;
-          border-radius: 10px;
-          border: 1px solid black;
-          background-color: transparent;
-          a {
-            text-decoration: none;
-            color: black;
-            font-size: 1.1rem;
-            &:hover {
-              text-decoration: underline;
-              color: rgb(255, 95, 90);
-            }
-          }
-        }
-      }
-
-      .price {
-        font-weight: 400;
-      }
-      img {
-        display: block;
-        margin: 1vh auto;
-        height: 24vh;
-        width: 85vw;
-      }
-    }
-  }
-  .browse-buttons {
-    margin: 10vh auto 5vh;
-    width: 40vw;
-    display: flex;
-    position: relative;
-    top: 140vh;
-    button {
-      flex: 1;
-      justify-content: space-around;
-      width: 5vw;
-      background: transparent;
-      height: 5vh;
-      font-size: 1.2rem;
-      border: none;
-    }
-  }
-}
 
 // reg / login
 .auth-wrapp {
@@ -421,97 +324,59 @@ nav {
   left: 80px;
 }
 
-.host {
-  min-height: 60vh;
-  padding: 10vh 5vw;
-
-  .top,
-  .mid {
-    h2 {
-      margin-bottom: 7vh;
-      font-size: 1.6rem;
-      font-weight: 800;
-    }
-    h3 {
-      margin-bottom: 3vh;
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-    p {
-      margin-bottom: 5vh;
-    }
-  }
-  .mid-bot {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    img {
-      width: 100%;
-      margin: 20px auto;
-    }
-    .small-print {
-      font-size: 0.8rem;
-      margin-top: 2vh;
-    }
-    button {
-      font-size: 1.1rem;
-      margin-top: 20px;
-      border-radius: 10px;
-      width: 200px;
-      height: 50px;
-      background-color: transparent;
-      color: black;
-      border: 2px solid black;
-      font-weight: 600;
-    }
-  }
-  .bottom {
-    margin-top: 10vh;
-  }
-}
 .user,
 .help {
   min-height: 60vh;
   padding-top: 10vh;
 }
 
-.houseView {
-  min-height: 70vh;
-  width: 100%;
-  .houseMain {
-    width: 80vw;
-    margin: 1vh auto;
-    h2 {
-      margin-top: 5vh;
-    }
-    .smallText {
+//TABLET
+
+@media (min-width: 605px) {
+  //homepage
+
+  .home-second {
+    .home-second-car-container {
       display: flex;
-      p {
-        flex: 1;
-        font-size: 0.8rem;
-        color: rgb(87, 84, 84);
-      }
-    }
-    .houseInfo {
-      width: 70vw;
-      .details {
-        width: 60vw;
-        display: flex;
-        p {
-          width: 50%;
-          flex: 1;
+      flex-wrap: wrap;
+
+      .homepage-car {
+        height: 18vh;
+        width: 48vw;
+        .homepage-car-content {
+          .homepage-car-text {
+            width: 40%;
+            button {
+              width: 20vw;
+            }
+          }
+          .obr {
+            width: 60%;
+          }
         }
       }
     }
   }
-}
 
-//tablet
-@media (min-width: 650px) {
+  .home-third-faq {
+    width: 90vw;
+
+    .home-third-faq-title {
+      h4 {
+        width: 80vw;
+        text-align: left;
+      }
+    }
+  }
+
+  //host page
   .host {
     padding: 10vh 10vw;
     width: 60%;
     margin: 0 auto;
   }
+
+  //Footer
   .footer {
     width: 90%;
     padding: 2vh 2vw;
@@ -536,13 +401,8 @@ nav {
   }
 }
 
-//
-@media (min-width: 745px) {
-  .host {
-    .bottom {
-      margin-top: 15vh;
-    }
-  }
+//pc
+@media (min-width: 770px) {
   .nav {
     .nav-hide {
       display: inline;
@@ -556,16 +416,16 @@ nav {
 
   //HOME
   .home {
+    // home formular
     .home-form-wrapper {
-      width: 500px;
+      width: 90vw;
       min-height: 60vh;
-      border: 1px solid black;
-      border-radius: 5px;
-      padding-top: 4vh;
+      margin: 0 auto;
 
       .home-picker {
         .picker,
         .picker-second {
+          flex: none;
           .react-date-picker__wrapper {
             width: 195px;
             height: 31px;
@@ -573,6 +433,7 @@ nav {
         }
       }
     }
+
     h2 {
       font-size: 1.8rem;
     }
@@ -596,110 +457,62 @@ nav {
     }
   }
 
-  .browse {
-    min-height: 165vh;
-    .houseWrapper {
-      .singleHouse {
-        margin-bottom: 1vh;
-        height: 30vh;
-        img {
-          height: 80%;
-          width: 40vw;
-          margin: 1vh 1vw;
-        }
-        .singleHouseContent {
-          position: relative;
-          top: -25vh;
-          left: 38vw;
-          width: 50vw;
+  //pc large
+  @media (min-width: 1000px) {
+    // homepage
+    .home {
+      .home-second {
+        .homepage-car {
+          width: 32vw;
+          height: 21vh;
 
-          h4,
-          p {
-            margin-top: 2vh;
-          }
-          .flex-offer-second {
-            display: block;
+          .homepage-car-content {
+            padding: 1vh 2vw 0 2vw;
+            .homepage-car-text {
+              button {
+                width: 10vw;
+              }
+            }
           }
         }
       }
     }
-    .browse-buttons {
-      top: 105vh;
-    }
-  }
-}
 
-//pc
-@media (min-width: 900px) {
-  .footer {
-    display: flex;
-    .footer-large {
-      flex: 1;
-      .footer-head {
-        font-size: 1rem;
-      }
-      .one-fourth {
-        border: none;
-        display: block;
-        font-size: 0.8rem;
-        li {
-          width: 20vw;
-        }
-      }
-    }
-    .footer-bottom {
-      display: none;
-    }
-  }
-  .home {
-    position: relative;
-    left: 15vw;
-    width: 70vw;
-  }
-  .mid-bot {
-    img {
-      width: 40vw !important;
-      float: right;
-    }
-    p,
-    button {
-      position: relative;
-      top: 3vh;
-      margin-right: 1vw;
-    }
-    button {
-      width: 19vw !important;
-    }
-  }
-  .browse {
-    min-height: 65vh;
-    .houseWrapper {
+    .footer {
       display: flex;
-      min-height: 46vh;
-      .singleHouse {
-        h4,
-        p {
-          margin-left: 0;
-        }
+      .footer-large {
         flex: 1;
-        width: 15vw;
-        height: 40vh;
-        img {
-          width: 15vw;
-          height: 15vh;
-          margin: 0;
+        .footer-head {
+          font-size: 1rem;
         }
-        .singleHouseContent {
-          position: static;
-          width: 15vw;
-          .flex-offer {
-            display: block;
+        .one-fourth {
+          border: none;
+          display: block;
+          font-size: 0.8rem;
+          li {
+            width: 20vw;
           }
         }
       }
+      .footer-bottom {
+        display: none;
+      }
     }
-    .browse-buttons {
-      top: 0;
+
+    .mid-bot {
+      img {
+        width: 40vw !important;
+        float: right;
+      }
+      p,
+      button {
+        position: relative;
+        top: 3vh;
+        margin-right: 1vw;
+      }
+      button {
+        width: 19vw !important;
+      }
     }
   }
 }

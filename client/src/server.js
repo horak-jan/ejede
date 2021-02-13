@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 // const config = require("../src/utils/index");
-const { auth } = require("express-openid-connect");
 
 const DIST_DIR = path.resolve("public/build/");
 
@@ -33,8 +32,6 @@ const config = {
   clientID: process.env.CLIENTID,
   issuerBaseURL: process.env.ISSUERBASEURL,
 };
-// auth
-app.use(auth(config));
 
 // views setup
 app.set("views", path.join(__dirname, "views"));

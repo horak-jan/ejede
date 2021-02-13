@@ -11,6 +11,11 @@ const ToggleBox = () => {
     <div className="home-third-faq">
       <div className="home-third-faq-title" onClick={toggle}>
         <h4>Otazka 1</h4>
+        {isOpened ? (
+          <img src="https://img.icons8.com/material-outlined/24/000000/collapse-arrow.png" />
+        ) : (
+          <img src="https://img.icons8.com/material-outlined/24/000000/expand-arrow--v1.png" />
+        )}
       </div>
       {isOpened && (
         <div className="home-third-faq-text">

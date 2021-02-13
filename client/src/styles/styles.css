@@ -35,9 +35,7 @@ nav ul li:hover {
 }
 
 .home {
-  background-image: url("../images/small-home-top.jpg");
-  background-repeat: no-repeat;
-  width: 100vw;
+  max-width: 1005px;
   min-height: 70vh;
   text-align: center;
 }
@@ -55,13 +53,11 @@ nav ul li:hover {
   position: relative;
   text-align: center;
   top: 5vh;
-  color: white;
 }
 
 .home .home-form-wrapper p {
   margin-top: 7vh;
   margin-bottom: 7vh;
-  color: white;
 }
 
 .home .home-form-wrapper .home-picker {
@@ -123,7 +119,7 @@ nav ul li:hover {
   padding-top: 5vh;
   border-radius: 16px 16px 0 0;
   text-align: center;
-  margin-bottom: 5vh;
+  padding-bottom: 5vh;
 }
 
 .home .home-second h2 {
@@ -142,7 +138,7 @@ nav ul li:hover {
   overflow: hidden;
   padding-top: 9px;
   border-bottom: 1px solid transparent;
-  width: 80vw;
+  width: 280px;
   margin: 0 auto 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,7 +174,7 @@ nav ul li:hover {
 
 .home .home-second .homepage-car .homepage-car-content .homepage-car-text button {
   margin: 1vh 0;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 25vw;
   height: 4vh;
   color: white;
@@ -197,8 +193,8 @@ nav ul li:hover {
 }
 
 .home .home-second .homepage-car .homepage-car-content .obr img {
-  height: 70%;
-  width: 80%;
+  height: 80%;
+  width: 90%;
   float: right;
 }
 
@@ -209,13 +205,13 @@ nav ul li:hover {
   margin-bottom: 5vh;
 }
 
+.home .home-third h3 {
+  margin-bottom: 2vh;
+}
+
 .home .home-third .home-third-faq {
   width: 80vw;
   margin: 0 auto 10px;
-}
-
-.home .home-third .home-third-faq h3 {
-  margin-bottom: 2vh;
 }
 
 .home .home-third .home-third-faq .home-third-faq-title {
@@ -237,46 +233,20 @@ nav ul li:hover {
   border-bottom: 1px solid grey;
 }
 
+.home .home-third .home-third-faq .home-third-faq-title h4 {
+  width: 70vw;
+}
+
 .home .home-third .home-third-faq .home-third-faq-text {
   font-size: 14px;
   line-height: 20px;
-}
-
-.home-fourth {
-  background-color: #f0f4fa;
-  position: relative;
-  top: 20vh;
-  min-height: 60vh;
-  width: 100vw;
-  text-align: center;
-  border-radius: 16px 16px 0 0;
-  padding-top: 5vh;
-  margin-bottom: 20vh;
-}
-
-.home-fourth h3 {
-  margin: 2vh auto;
-}
-
-.home-fourth .home-second-text {
-  border-radius: 7%;
-}
-
-.home-fourth .home-second-text .circle {
-  margin: 3vh auto;
-  text-align: center;
-  border: 1px white solid;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
 }
 
 .fourOhfour {
   min-height: 70vh;
   width: 70vw;
   font-size: 1.3rem;
-  margin: 5vh auto;
+  margin: 15vh auto;
 }
 
 .fourOhfour h2 {
@@ -295,7 +265,6 @@ nav ul li:hover {
   width: 60%;
   margin: 5vh auto;
   padding-top: 2vh;
-  border-top: 1px solid grey;
 }
 
 .footer .footer-head {
@@ -312,103 +281,7 @@ nav ul li:hover {
 
 .footer .footer-bottom {
   font-size: 0.8rem;
-  float: left;
-}
-
-.browse {
-  width: 95vw;
-  margin: 5vh auto;
-  min-height: 198vh;
-}
-
-.browse h2 {
-  margin-left: 3vw;
-}
-
-.browse .houseWrapper {
-  margin: 2vh auto;
-  padding: 0 2vw;
-  width: 90vw;
-  height: 38vh;
-  font-size: 1.1rem;
-}
-
-.browse .houseWrapper .singleHouse {
-  margin-bottom: 2vh;
-}
-
-.browse .houseWrapper .singleHouse h4,
-.browse .houseWrapper .singleHouse p {
-  margin-left: 5vw;
-}
-
-.browse .houseWrapper .singleHouse .flex-offer,
-.browse .houseWrapper .singleHouse .flex-offer-second {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.browse .houseWrapper .singleHouse .flex-offer p,
-.browse .houseWrapper .singleHouse .flex-offer-second p {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.browse .houseWrapper .singleHouse .flex-offer button,
-.browse .houseWrapper .singleHouse .flex-offer-second button {
-  padding: 6px 15px;
-  border-radius: 10px;
-  border: 1px solid black;
-  background-color: transparent;
-}
-
-.browse .houseWrapper .singleHouse .flex-offer button a,
-.browse .houseWrapper .singleHouse .flex-offer-second button a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
-}
-
-.browse .houseWrapper .singleHouse .flex-offer button a:hover,
-.browse .houseWrapper .singleHouse .flex-offer-second button a:hover {
-  text-decoration: underline;
-  color: #ff5f5a;
-}
-
-.browse .houseWrapper .singleHouse .price {
-  font-weight: 400;
-}
-
-.browse .houseWrapper .singleHouse img {
-  display: block;
-  margin: 1vh auto;
-  height: 24vh;
-  width: 85vw;
-}
-
-.browse .browse-buttons {
-  margin: 10vh auto 5vh;
-  width: 40vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  top: 140vh;
-}
-
-.browse .browse-buttons button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 5vw;
-  background: transparent;
-  height: 5vh;
-  font-size: 1.2rem;
-  border: none;
+  text-align: center;
 }
 
 .auth-wrapp {
@@ -489,114 +362,40 @@ nav ul li:hover {
   left: 80px;
 }
 
-.host {
-  min-height: 60vh;
-  padding: 10vh 5vw;
-}
-
-.host .top h2,
-.host .mid h2 {
-  margin-bottom: 7vh;
-  font-size: 1.6rem;
-  font-weight: 800;
-}
-
-.host .top h3,
-.host .mid h3 {
-  margin-bottom: 3vh;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.host .top p,
-.host .mid p {
-  margin-bottom: 5vh;
-}
-
-.host .mid-bot {
-  margin-top: 10vh;
-  margin-bottom: 10vh;
-}
-
-.host .mid-bot img {
-  width: 100%;
-  margin: 20px auto;
-}
-
-.host .mid-bot .small-print {
-  font-size: 0.8rem;
-  margin-top: 2vh;
-}
-
-.host .mid-bot button {
-  font-size: 1.1rem;
-  margin-top: 20px;
-  border-radius: 10px;
-  width: 200px;
-  height: 50px;
-  background-color: transparent;
-  color: black;
-  border: 2px solid black;
-  font-weight: 600;
-}
-
-.host .bottom {
-  margin-top: 10vh;
-}
-
 .user,
 .help {
   min-height: 60vh;
   padding-top: 10vh;
 }
 
-.houseView {
-  min-height: 70vh;
-  width: 100%;
-}
-
-.houseView .houseMain {
-  width: 80vw;
-  margin: 1vh auto;
-}
-
-.houseView .houseMain h2 {
-  margin-top: 5vh;
-}
-
-.houseView .houseMain .smallText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.houseView .houseMain .smallText p {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-size: 0.8rem;
-  color: #575454;
-}
-
-.houseView .houseMain .houseInfo {
-  width: 70vw;
-}
-
-.houseView .houseMain .houseInfo .details {
-  width: 60vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.houseView .houseMain .houseInfo .details p {
-  width: 50%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-@media (min-width: 650px) {
+@media (min-width: 605px) {
+  .home-second .home-second-car-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .home-second .home-second-car-container .homepage-car {
+    height: 18vh;
+    width: 48vw;
+  }
+  .home-second .home-second-car-container .homepage-car .homepage-car-content .homepage-car-text {
+    width: 40%;
+  }
+  .home-second .home-second-car-container .homepage-car .homepage-car-content .homepage-car-text button {
+    width: 20vw;
+  }
+  .home-second .home-second-car-container .homepage-car .homepage-car-content .obr {
+    width: 60%;
+  }
+  .home-third-faq {
+    width: 90vw;
+  }
+  .home-third-faq .home-third-faq-title h4 {
+    width: 80vw;
+    text-align: left;
+  }
   .host {
     padding: 10vh 10vw;
     width: 60%;
@@ -630,10 +429,7 @@ nav ul li:hover {
   }
 }
 
-@media (min-width: 745px) {
-  .host .bottom {
-    margin-top: 15vh;
-  }
+@media (min-width: 770px) {
   .nav .nav-hide {
     display: inline;
   }
@@ -641,11 +437,15 @@ nav ul li:hover {
     border: 1px solid #e6e6e6;
   }
   .home .home-form-wrapper {
-    width: 500px;
+    width: 90vw;
     min-height: 60vh;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding-top: 4vh;
+    margin: 0 auto;
+  }
+  .home .home-form-wrapper .home-picker .picker,
+  .home .home-form-wrapper .home-picker .picker-second {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
   .home .home-form-wrapper .home-picker .picker .react-date-picker__wrapper,
   .home .home-form-wrapper .home-picker .picker-second .react-date-picker__wrapper {
@@ -668,37 +468,19 @@ nav ul li:hover {
     height: 50px;
     margin-top: 8vh;
   }
-  .browse {
-    min-height: 165vh;
-  }
-  .browse .houseWrapper .singleHouse {
-    margin-bottom: 1vh;
-    height: 30vh;
-  }
-  .browse .houseWrapper .singleHouse img {
-    height: 80%;
-    width: 40vw;
-    margin: 1vh 1vw;
-  }
-  .browse .houseWrapper .singleHouse .singleHouseContent {
-    position: relative;
-    top: -25vh;
-    left: 38vw;
-    width: 50vw;
-  }
-  .browse .houseWrapper .singleHouse .singleHouseContent h4,
-  .browse .houseWrapper .singleHouse .singleHouseContent p {
-    margin-top: 2vh;
-  }
-  .browse .houseWrapper .singleHouse .singleHouseContent .flex-offer-second {
-    display: block;
-  }
-  .browse .browse-buttons {
-    top: 105vh;
-  }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 770px) and (min-width: 1000px) {
+  .home .home-second .homepage-car {
+    width: 32vw;
+    height: 21vh;
+  }
+  .home .home-second .homepage-car .homepage-car-content {
+    padding: 1vh 2vw 0 2vw;
+  }
+  .home .home-second .homepage-car .homepage-car-content .homepage-car-text button {
+    width: 10vw;
+  }
   .footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -723,11 +505,6 @@ nav ul li:hover {
   .footer .footer-bottom {
     display: none;
   }
-  .home {
-    position: relative;
-    left: 15vw;
-    width: 70vw;
-  }
   .mid-bot img {
     width: 40vw !important;
     float: right;
@@ -740,41 +517,6 @@ nav ul li:hover {
   }
   .mid-bot button {
     width: 19vw !important;
-  }
-  .browse {
-    min-height: 65vh;
-  }
-  .browse .houseWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 46vh;
-  }
-  .browse .houseWrapper .singleHouse {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    width: 15vw;
-    height: 40vh;
-  }
-  .browse .houseWrapper .singleHouse h4,
-  .browse .houseWrapper .singleHouse p {
-    margin-left: 0;
-  }
-  .browse .houseWrapper .singleHouse img {
-    width: 15vw;
-    height: 15vh;
-    margin: 0;
-  }
-  .browse .houseWrapper .singleHouse .singleHouseContent {
-    position: static;
-    width: 15vw;
-  }
-  .browse .houseWrapper .singleHouse .singleHouseContent .flex-offer {
-    display: block;
-  }
-  .browse .browse-buttons {
-    top: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const FourOhFour = () => {
-	return (
-		<div className='fourOhfour'>
-			<h2>Well hello there</h2>
-			<p>
-				You are not supposed to be here. Let me take you{' '}
-				<a href='/'>back home</a>.
-			</p>
-		</div>
-	);
+  return (
+    <div className="fourOhfour">
+      <h2>Zdravím tě,</h2>
+      <p>
+        jak jsi se sem dostal? Co kdybych tě vzal zpátky <a href="/">domů</a>.
+      </p>
+    </div>
+  );
 };
 
 export default FourOhFour;
