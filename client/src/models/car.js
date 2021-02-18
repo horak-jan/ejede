@@ -26,6 +26,10 @@ const CarSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    rating: {
+      type: Number,
+      required: true,
+    },
     range: {
       type: Number,
       required: true,

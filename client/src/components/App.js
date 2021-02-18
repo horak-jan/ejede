@@ -7,7 +7,7 @@ import { StateProvider } from "../state";
 import Navbar from "./ui/Navbar";
 import Footer from "../views/Footer";
 
-const House = lazy(() => import("../views/House"));
+const Car = lazy(() => import("../views/Car"));
 const Browse = lazy(() => import("../views/Browse"));
 const User = lazy(() => import("../views/User"));
 const Help = lazy(() => import("../views/Help"));
@@ -36,8 +36,8 @@ const App = () => {
       adults: 0,
       kids: 0,
     },
-    selectedHouse: {
-      singleHouse: {},
+    selectedCar: {
+      singleCar: {},
     },
   };
 
@@ -73,10 +73,10 @@ const App = () => {
             endTime: action.setEndTime,
           },
         };
-      case "pickHouse":
+      case "pickCar":
         return {
           ...state,
-          selectedHouse: action.setHouse,
+          selectedCar: action.setCar,
         };
       default:
         return state;
@@ -95,7 +95,7 @@ const App = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/user" component={User} />
             <Route exact path="/browse" component={Browse} />
-            <Route exact path="/house" component={House} />
+            <Route exact path="/car" component={Car} />
             <Route exact path="/" component={Home} />
             <Route exact path="/*" component={FourOhFour} />
           </Switch>

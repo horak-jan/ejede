@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 import SingleCar from "../components/ui/SingleCar";
+import BrowseTop from "../components/ui/BrowseTop";
+import BrowseFilter from "../components/ui/BrowseFilter";
 
 const Browse = () => {
   const [cars, setCars] = useState({});
@@ -21,12 +23,24 @@ const Browse = () => {
       }
       setIsLoading(false);
     }
+    getData();
   }, [page]);
 
   return (
     <div className="browse">
-      <h2>hello</h2>
-      <SingleCar />
+      <div className="browse-container">
+        <BrowseTop />
+        <h2>hello lorem ipsum and so on an so forth</h2>
+        <BrowseFilter />
+
+        {isError && <div>Někde se stala chyba ...</div>}
+
+        {isLoading ? (
+          <div>'Načítám...'</div>
+        ) : (
+          cars.car.map((car) => <SingleCar key={car._id} car={car} />)
+        )}
+      </div>
     </div>
   );
 };

@@ -213,7 +213,70 @@ nav {
 //browse page
 //mobile
 .browse {
-  background-color: #424242;
+  background-color: #fafbfc;
+  width: 100vw;
+  min-height: 70vh;
+  .browse-container {
+    background-color: white;
+    width: 90vw;
+    padding: 10px;
+    margin: 10vh auto 0 auto;
+
+    .broswe-filter {
+      display: none;
+    }
+    .browse-top {
+      width: 100%;
+      height: 20vh;
+      background-color: #424242;
+    }
+    .singleCar {
+      border: 1px solid black;
+      margin-bottom: 2vh;
+      .singleCar-content {
+        padding: 10px;
+        .singleCar-content-img {
+          img {
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+          }
+          .singleCar-content-tablet {
+            display: none;
+          }
+        }
+
+        .singleCar-content-text {
+          display: flex;
+          margin: 1vh auto;
+          height: 5vh;
+          p {
+            flex: 1;
+            text-align: start;
+            img {
+              vertical-align: bottom;
+              width: 24px;
+            }
+          }
+        }
+        .singleCar-bottom {
+          width: 100%;
+          border: 1px blue solid;
+          height: 5vh;
+          margin: 2vh 0;
+          p {
+            float: left;
+            padding-top: 10px;
+          }
+          button {
+            float: right;
+            width: 100px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // 404
@@ -331,6 +394,7 @@ nav {
 }
 
 //TABLET
+// 605px +
 
 @media (min-width: 605px) {
   //homepage
@@ -376,6 +440,58 @@ nav {
     margin: 0 auto;
   }
 
+  //Browse
+  // tablet
+  .browse {
+    .browse-container {
+      max-width: 630px;
+      .singleCar {
+        .singleCar-content {
+          .singleCar-content-img {
+            display: flex;
+            border: 1px solid black;
+
+            .singleCar-content-tablet {
+              display: block;
+              flex: 1;
+              margin: auto 0;
+              p {
+                line-height: 24px;
+                img {
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+            }
+            img {
+              flex: 1;
+              max-width: 300px;
+              height: 175px;
+            }
+          }
+
+          .singleCar-content-text {
+            font-size: 1.1rem;
+            height: 3vh;
+            p {
+              text-align: center;
+              img {
+                width: 24px;
+              }
+            }
+          }
+          .singleCar-bottom {
+            margin: 1vh 0;
+            button {
+              width: 150px;
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
   //Footer
   .footer {
     width: 90%;
@@ -402,6 +518,7 @@ nav {
 }
 
 //pc
+// 770+
 @media (min-width: 770px) {
   .nav {
     .nav-hide {
@@ -414,7 +531,8 @@ nav {
     }
   }
 
-  //HOME
+  // HOME
+  // pc
   .home {
     // home formular
     .home-form-wrapper {
@@ -458,6 +576,7 @@ nav {
   }
 
   //pc large
+  // 1000+
   @media (min-width: 1000px) {
     // homepage
     .home {
@@ -478,6 +597,29 @@ nav {
       }
     }
 
+    // BROWSE
+    // pc large
+    .browse {
+      .browse-container {
+        max-width: 1100px;
+
+        .browse-filter {
+          width: 270px;
+          border: 1px solid blue;
+          display: block;
+          float: left;
+          min-height: 30vh;
+        }
+        .singleCar {
+          float: right;
+          max-width: 820px;
+          width: 800px;
+        }
+      }
+    }
+
+    // footer
+    // pc large
     .footer {
       display: flex;
       .footer-large {
