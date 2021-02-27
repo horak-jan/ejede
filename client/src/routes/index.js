@@ -15,7 +15,7 @@ module.exports = (app) => {
 
   app.use("/api/car", car);
   app.use("/api/booking", booking);
-  // app.use('/api/auth', auth);
+  // app.use("/api/auth", auth);
   // app.use("/api/user", auth, user);
   // app.use("/api/house", house);
   // app.get("/admin", requiresAuth(), (req, res) =>

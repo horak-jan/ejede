@@ -85,24 +85,22 @@ const App = () => {
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
       <Router>
-        {/* <div className="app"> */}
         <Navbar />
         <Suspense fallback={<div>Načítám...</div>}>
           <Switch>
             <Route exact path="/help" component={Help} />
             <Route exact path="/host" component={Host} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/register" component={Register} /> */}
+            {/* <Route exact path="/login" component={Login} /> */}
             <Route exact path="/user" component={User} />
             <Route exact path="/browse" component={Browse} />
             <Route exact path="/car" component={Car} />
             <Route exact path="/" component={Home} />
-            <Route exact path="/*" component={FourOhFour} />
+            {/* <Route exact path="/*" component={FourOhFour} /> */}
           </Switch>
         </Suspense>
 
         <Footer />
-        {/* </div> */}
       </Router>
     </StateProvider>
   );

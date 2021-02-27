@@ -38,7 +38,7 @@ const SingleCar = (props) => {
         <SingleCarContentText seats={seats} doors={doors} range={range} />
         <div className="singleCar-bottom">
           <p>Zákaznické hodnocení {rating}*</p>
-          <button onClick={() => pickThisCar(props)}>Vice informaci</button>
+          <button onClick={() => pickThisCar(props)}>Rezervovat</button>
         </div>
       </div>
     </div>

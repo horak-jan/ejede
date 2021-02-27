@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 // const config = require("../src/utils/index");
+const { auth } = require("express-openid-connect");
 
 const DIST_DIR = path.resolve("public/build/");
 
@@ -24,13 +25,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //form-urlencoded
 
+//auth set up
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: process.env.SECRET,
+  secret: process.env.AUTHSECRET,
   baseURL: process.env.BASEURL,
   clientID: process.env.CLIENTID,
   issuerBaseURL: process.env.ISSUERBASEURL,
+  idpLogout: true,
 };
 
 // views setup
@@ -54,17 +57,18 @@ connection.on("error", (err) => {
 
 //Configure Route
 require("./routes/index")(app);
-
+// auth routes
+// app.use(auth(config));
 app.use(express.static(DIST_DIR));
 
 //catch-all for SSR
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(DIST_DIR, "/index.html"), function (err) {
-    if (err) {
-      res.status(500).send(err);
-    }
-  });
-});
+// app.get("/*", function (req, res) {
+//   res.sendFile(path.join(DIST_DIR, "/index.html"), function (err) {
+//     if (err) {
+//       res.status(500).send(err);
+//     }
+//   });
+// });
 
 app.listen(PORT, () =>
   console.log("Server running on http://localhost:" + PORT + "/")

@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
 import { useStateValue } from "../../state";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
+import Profile from "./Profile";
 
 const HomeForm = () => {
   const { register, handleSubmit, errors } = useForm();
@@ -41,6 +44,10 @@ const HomeForm = () => {
   return (
     <div>
       <div className="home-picker">
+        <LoginButton />
+        <LogoutButton />
+        <Profile />
+        <br />
         <div className="picker">
           PŘÍJEZD
           <br />
