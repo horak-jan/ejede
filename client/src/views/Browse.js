@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Axios from "axios";
+import { useStateValue } from "../state";
 
-import SingleCar from "../components/ui/SingleCar";
-import BrowseTop from "../components/ui/BrowseTop";
-import BrowseFilter from "../components/ui/BrowseFilter";
+import SingleCar from "../components/ui/Browse/SingleCar";
+import BrowseTop from "../components/ui/Browse/BrowseTop";
+import BrowseFilter from "../components/ui/Browse/BrowseFilter";
 
 const Browse = () => {
   const [cars, setCars] = useState([]);
@@ -15,7 +16,7 @@ const Browse = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-//nacti vse z db
+    //get all from
     async function getData() {
       setIsError(false);
 
@@ -35,7 +36,7 @@ const Browse = () => {
   // make: "make",
   //       color: "color",
   //       model: "model",
-  
+
   // SORT
   useEffect(() => {
     const sortCars = (type) => {
@@ -59,19 +60,18 @@ const Browse = () => {
         <BrowseTop />
         <h2>hello lorem ipsum and so on an so forth</h2>
         <BrowseFilter />
-
         {/* sort picker */}
         <select onChange={(e) => setSortType(e.target.value)}>
           <option value="rating">Rating</option>
-          <option value="range">dojezd</option>
+          <option value="range">Dojezd</option>
         </select>
-
-//vypis erroru
+        {/* show errors */}
         {isError && <div>Někde se stala chyba ...</div>}
-
+        {/* show loader */}
         {isLoading ? (
           <div>'Načítám...'</div>
         ) : data.length === 0 ? (
+          // if sorted
           cars.map((car) => <SingleCar key={car._id} car={car} />)
         ) : (
           data.map((car) => <SingleCar key={car._id} car={car} />)

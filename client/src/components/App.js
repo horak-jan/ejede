@@ -4,40 +4,35 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "../styles/styles.css";
 import { StateProvider } from "../state";
-import Navbar from "./ui/Navbar";
+import Navbar from "./ui/Nav/Navbar";
 import Footer from "../views/Footer";
 
 const Car = lazy(() => import("../views/Car"));
 const Browse = lazy(() => import("../views/Browse"));
 const User = lazy(() => import("../views/User"));
 const Help = lazy(() => import("../views/Help"));
-const Host = lazy(() => import("../views/Host"));
-const Register = lazy(() => import("../views/Register"));
-const Login = lazy(() => import("../views/Login"));
+const FinishOrder = lazy(() => import("../views/FinishOrder"));
+const Pobocka = lazy(() => import("../views/Pobocka"));
 const Home = lazy(() => import("../views/Home"));
 
 import FourOhFour from "../views/FourOhFour";
+import OsobniUdaje from "../views/OsobniUdaje";
 
 const App = () => {
   const initialState = {
-    auth: {
-      isAuthenticated: false,
-      token: "",
-      username: "",
-      id: "",
-    },
     bookingDate: {
       startDate: Date,
       endDate: Date,
-      startTime: "",
-      endTime: "",
-      pickUp: "",
-      dropOff: "",
-      adults: 0,
-      kids: 0,
+      pickupPlace: "",
     },
     selectedCar: {
       singleCar: {},
+    },
+    selectedPlace: {
+      place: {
+        link: "ostrava",
+        name: "Ostrava",
+      },
     },
   };
 
@@ -53,30 +48,24 @@ const App = () => {
             id: action.setId,
           },
         };
-      case "logout":
-        return {
-          ...state,
-          auth: {
-            isAuthenticated: action.authenticated,
-            token: action.resToken,
-            username: action.setUsername,
-            id: action.setId,
-          },
-        };
       case "bookDate":
         return {
           ...state,
           bookingDate: {
             startDate: action.setStartDate,
             endDate: action.setEndDate,
-            startTime: action.setStartTime,
-            endTime: action.setEndTime,
+            pickupPlace: action.setPickupPlace,
           },
         };
       case "pickCar":
         return {
           ...state,
           selectedCar: action.setCar,
+        };
+      case "pickPlace":
+        return {
+          ...state,
+          selectedPlace: action.setPlace,
         };
       default:
         return state;
@@ -89,14 +78,14 @@ const App = () => {
         <Suspense fallback={<div>Načítám...</div>}>
           <Switch>
             <Route exact path="/help" component={Help} />
-            <Route exact path="/host" component={Host} />
-            {/* <Route exact path="/register" component={Register} /> */}
-            {/* <Route exact path="/login" component={Login} /> */}
             <Route exact path="/user" component={User} />
+            <Route exact path="/osobniudaje" component={OsobniUdaje} />
             <Route exact path="/browse" component={Browse} />
+            <Route exact path="/finishOrder" component={FinishOrder} />
             <Route exact path="/car" component={Car} />
+            <Route path="/pobocka" component={Pobocka} />
             <Route exact path="/" component={Home} />
-            {/* <Route exact path="/*" component={FourOhFour} /> */}
+            <Route exact path="/*" component={FourOhFour} />
           </Switch>
         </Suspense>
 

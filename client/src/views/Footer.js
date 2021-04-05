@@ -1,14 +1,19 @@
 import React from "react";
 
-import FooterMedia from "../components/ui/FooterMedia";
-import FooterLinks from "../components/ui/FooterLinks";
+import FooterLinks from "../components/ui/Footer/FooterLinks";
+import FooterPlaces from "../components/ui/Footer/FooterPlaces";
+import FooterContactAndMedia from "../components/ui/Footer/FooterContactAndMedia";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <FooterMedia />
+      <div className="footer-content">
+        <FooterContactAndMedia />
 
-      <FooterLinks />
+        <FooterLinks />
+
+        <FooterPlaces />
+      </div>
     </div>
   );
 };

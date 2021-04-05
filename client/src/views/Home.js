@@ -1,22 +1,27 @@
 import React from "react";
-import Burger from "../components/ui/Burger";
-import HomeForm from "../components/ui/HomeForm";
-import HomeSecond from "../components/ui/HomeSecond";
-import HomeThird from "../components/ui/HomeThird";
+
+import HomeFirst from "../components/ui/HomePage/HomeFirst";
+import HomeFirstInfo from "../components/ui/HomePage/HomeFirstInfo";
+import HomeSecond from "../components/ui/HomePage/HomeSecond";
+import HomeSecondInfo from "../components/ui/HomePage/HomeSecondInfo";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="home-form-wrapper">
-        <Burger />
-        <h3>Vítejte!</h3>
+      <div className="covid">
+        <h2>Půjčovna aut v provozu</h2>
 
-        <p>Objevte krásu a sílu elektrickych aut na vlastní kůži</p>
-        <HomeForm />
+        <p>
+          Stavíme bezpečnost na první místo, proto vozidla důkladně čistíme a
+          dezinfikujeme přípravky SANYTOL.
+        </p>
       </div>
+      <HomeFirst />
+      <HomeFirstInfo />
+
+      <HomeSecondInfo />
 
       <HomeSecond />
-      <HomeThird />
     </div>
   );
 };
