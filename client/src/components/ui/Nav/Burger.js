@@ -21,7 +21,9 @@ const Burger = () => {
     <div className="burger">
       <img className="logo-burger" src={Logo} alt="ejede logo" />
 
-      <h2>Ejede</h2>
+      <h2>
+        <a href="/">Ejede</a>
+      </h2>
 
       <img
         className={visible ? "burger-button-hidden" : "burger-button"}
@@ -51,13 +53,13 @@ const Burger = () => {
             </li>
             <div className="nav-hide">
               <li>
-                <Link onClick={() => setVisible(false)} to="/host">
+                <Link onClick={() => setVisible(false)} to="/pobocka">
                   O nás
                 </Link>
               </li>
               <li>
                 <Link to="/help" onClick={() => setVisible(false)}>
-                  Časté otázky
+                  Podmínky
                 </Link>
               </li>
             </div>

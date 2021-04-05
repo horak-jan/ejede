@@ -24,10 +24,10 @@ const Nav = () => {
           <Link to="/">EJEDE</Link>
         </li>
         <li>
-          <Link to="/host">O nás</Link>
+          <Link to="/pobocka">O nás</Link>
         </li>
         <li>
-          <Link to="/help">Časté otázky</Link>
+          <Link to="/help">Podmínky</Link>
         </li>
         {/* user is logged? */}
         {isAuthenticated ? (
@@ -43,7 +43,6 @@ const Nav = () => {
                 Log out
               </Link>
             </li>
-            <li>Jmeno</li>
           </>
         ) : (
           // for not logged users
