@@ -1,8 +1,44 @@
 [
-  { "link": "havirov", "name": "Havířov" },
-  { "link": "karvina", "name": "Karviná" },
-  { "link": "frydek", "name": "Frýdek-Místek" },
-  { "link": "bohumin", "name": "Bohumín" },
-  { "link": "orlova", "name": "Orlová" },
-  { "link": "opava", "name": "Opava" }
+  {
+    "link": "havirov",
+    "name": "Havířov",
+    "lat": "49.77928106664543",
+    "lng": "18.435702793588618"
+  },
+  {
+    "link": "karvina",
+    "name": "Karviná",
+    "lat": "49.852436969292484",
+    "lng": "18.54766390456712"
+  },
+  {
+    "link": "frydek",
+    "name": "Frýdek-Místek",
+    "lat": "49.67877418615491",
+    "lng": "18.350278399654766"
+  },
+  {
+    "link": "bohumin",
+    "name": "Bohumín",
+    "lat": "49.90441043941099",
+    "lng": "18.3514183698519"
+  },
+  {
+    "link": "orlova",
+    "name": "Orlová",
+    "lat": "49.855217396794345",
+    "lng": "18.416376086775042"
+  },
+  {
+    "link": "opava",
+    "name": "Opava",
+    "lat": "49.938318237864735",
+    "lng": "17.905763060547688"
+  },
+  {
+    "link": "ostrava",
+    "name": "Ostrava",
+    "lat": "49.830359",
+    "lng": "18.164156"
+  }
 ]

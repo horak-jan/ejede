@@ -21,7 +21,11 @@ const FooterP = (props) => {
     }
   };
 
-  return <p onClick={() => pickThisPlace(props)}>Půjčovna {name}</p>;
+  return (
+    <p style={{ cursor: "pointer" }} onClick={() => pickThisPlace(props)}>
+      Půjčovna {name}
+    </p>
+  );
 };
 
 export default FooterP;
