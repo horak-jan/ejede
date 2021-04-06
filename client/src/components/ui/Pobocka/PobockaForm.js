@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const PobockaForm = () => {
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const [message, setMessage] = useState("");
+
+  const onSubmit = (data) => {
+    setMessage(
+      `Děkujeme Vám, budeme Vás kontaktovat co nejdříve na telefon ${data.mobil} `
+    );
+
+    console.log(data);
+  };
 
   return (
     <div className="form-wrapper">
       <h2>Napište nám</h2>
       <p>Máte nějaké dotazy? Neváhejte se zeptat!</p>
-
+      {/* show message after sending the form */}
+      <h3>{message}</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         {/*  name */}
         <label htmlFor="firstName">Jméno</label>
