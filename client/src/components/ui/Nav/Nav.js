@@ -27,7 +27,12 @@ const Nav = () => {
           <Link to="/pobocka">O nás</Link>
         </li>
         <li>
-          <Link to="/help">Podmínky</Link>
+          <Link to="/podminky">Podmínky</Link>
+        </li>
+        <li>
+          <Link to="/about" onClick={() => setVisible(false)}>
+            Služby
+          </Link>
         </li>
         {/* user is logged? */}
         {isAuthenticated ? (

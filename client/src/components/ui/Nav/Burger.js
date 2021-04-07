@@ -48,7 +48,7 @@ const Burger = () => {
           <ul>
             <li>
               <Link onClick={() => setVisible(false)} to="/">
-                Home
+                Domů
               </Link>
             </li>
             <div className="nav-hide">
@@ -58,8 +58,13 @@ const Burger = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/help" onClick={() => setVisible(false)}>
+                <Link to="/podminky" onClick={() => setVisible(false)}>
                   Podmínky
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => setVisible(false)}>
+                  Služby
                 </Link>
               </li>
             </div>
