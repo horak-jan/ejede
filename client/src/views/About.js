@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="about">
-      <h3>Podmínky zapůjčení</h3>
+      <h3>Služby</h3>
 
       <ul>
         <li>

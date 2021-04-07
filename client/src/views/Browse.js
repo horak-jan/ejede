@@ -4,38 +4,35 @@ import { useStateValue } from "../state";
 
 import SingleCar from "../components/ui/Browse/SingleCar";
 import BrowseTop from "../components/ui/Browse/BrowseTop";
-import BrowseFilter from "../components/ui/Browse/BrowseFilter";
+
+import Dataset from "../components/ui/Browse/Dataset.json";
 
 const Browse = () => {
-  const [cars, setCars] = useState([]);
+  const [cars, setCars] = useState(Dataset.car);
   const [page, setPage] = useState(1);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const [sortType, setSortType] = useState("color");
+  const [sortType, setSortType] = useState("");
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    //get all from
-    async function getData() {
-      setIsError(false);
+  // useEffect(() => {
+  //   //get all from
+  //   async function getData() {
+  //     setIsError(false);
 
-      try {
-        const res = await Axios.get(`/api/car?page=${page}`);
+  //     try {
+  //       const res = await Axios.get(`/api/car?page=${page}`);
 
-        setCars(res.data.car);
-      } catch (error) {
-        setIsError(true);
-      }
-      setIsLoading(false);
-    }
-    getData();
-  }, [page]);
-
-  //filters
-  // make: "make",
-  //       color: "color",
-  //       model: "model",
+  //       setCars(res.data.car);
+  //     } catch (error) {
+  //       setIsError(true);
+  //     }
+  //     setIsLoading(false);
+  //   }
+  //   getData();
+  // }, [page]);
 
   // SORT
   useEffect(() => {
@@ -43,6 +40,7 @@ const Browse = () => {
       const types = {
         rating: "rating",
         range: "range",
+        price: "dayPrice",
       };
       const sortProperty = types[type];
 
@@ -57,14 +55,18 @@ const Browse = () => {
   return (
     <div className="browse">
       <div className="browse-container">
+        <h2>Nabídka vozů</h2>
+
         <BrowseTop />
-        <h2>hello lorem ipsum and so on an so forth</h2>
-        <BrowseFilter />
-        {/* sort picker */}
-        <select onChange={(e) => setSortType(e.target.value)}>
-          <option value="rating">Rating</option>
-          <option value="range">Dojezd</option>
-        </select>
+        <div className="sort">
+          {/* sort picker */}
+          <select onChange={(e) => setSortType(e.target.value)}>
+            <option value="rating">Hodnocení</option>
+            <option value="range">Dojezd</option>
+            <option value="price">Cena</option>
+          </select>
+          <p>Řadit dle:</p>
+        </div>
         {/* show errors */}
         {isError && <div>Někde se stala chyba ...</div>}
         {/* show loader */}
