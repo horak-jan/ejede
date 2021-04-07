@@ -10,7 +10,8 @@ import Footer from "../views/Footer";
 const Car = lazy(() => import("../views/Car"));
 const Browse = lazy(() => import("../views/Browse"));
 const User = lazy(() => import("../views/User"));
-const Help = lazy(() => import("../views/Help"));
+const Terms = lazy(() => import("../views/Terms"));
+const About = lazy(() => import("../views/About"));
 const FinishOrder = lazy(() => import("../views/FinishOrder"));
 const Pobocka = lazy(() => import("../views/Pobocka"));
 const Home = lazy(() => import("../views/Home"));
@@ -32,6 +33,8 @@ const App = () => {
       place: {
         link: "ostrava",
         name: "Ostrava",
+        lat: 49.830359,
+        lng: 18.164156,
       },
     },
   };
@@ -77,12 +80,13 @@ const App = () => {
         <Navbar />
         <Suspense fallback={<div>Načítám...</div>}>
           <Switch>
-            <Route exact path="/help" component={Help} />
+            <Route exact path="/podminky" component={Terms} />
             <Route exact path="/user" component={User} />
             <Route exact path="/osobniudaje" component={OsobniUdaje} />
             <Route exact path="/browse" component={Browse} />
             <Route exact path="/finishOrder" component={FinishOrder} />
             <Route exact path="/car" component={Car} />
+            <Route exact path="/sluzby" component={About} />
             <Route path="/pobocka" component={Pobocka} />
             <Route exact path="/" component={Home} />
             <Route exact path="/*" component={FourOhFour} />

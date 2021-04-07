@@ -1,8 +1,8 @@
 import React from "react";
 
-const Help = () => {
+const Terms = () => {
   return (
-    <div className="help">
+    <div className="terms">
       <h2></h2>
       <h3>Podmínky zapůjčení</h3>
       <ul>
@@ -56,4 +56,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default Terms;

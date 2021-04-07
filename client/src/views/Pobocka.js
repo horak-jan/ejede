@@ -8,11 +8,11 @@ import { useStateValue } from "../state";
 const Pobocka = () => {
   const [{ selectedPlace }, dispatch] = useStateValue();
 
-  let { link } = selectedPlace.place;
-  console.log(link);
+  let { name, link, lat, lng } = selectedPlace.place;
+
   return (
     <div className="pobocka">
-      <PobockaMap />
+      <PobockaMap link={link} lat={lat} lng={lng} />
       <div className="pobocka-content">
         <PobockaForm />
         <div className="place-and-hours">
