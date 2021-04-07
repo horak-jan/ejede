@@ -40,7 +40,12 @@ exports.store = async (req, res) => {
 
     const message = await newMessage.save();
 
-    res.status(200).json({ message: message, message: "Otázka přidána" });
+    res
+      .status(200)
+      .json({
+        message: message,
+        message: `Děkujeme Vám, budeme Vás kontaktovat co nejdříve na telefon ${message.mobil}`,
+      });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

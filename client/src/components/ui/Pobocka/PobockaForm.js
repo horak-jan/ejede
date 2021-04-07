@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+const axios = require("axios").default;
 
 const PobockaForm = () => {
   const { register, handleSubmit, errors } = useForm();
   const [message, setMessage] = useState("");
 
-  const onSubmit = (data) => {
-    setMessage(
-      `Děkujeme Vám, budeme Vás kontaktovat co nejdříve na telefon ${data.mobil} `
-    );
+  const onSubmit = async (data) => {
+    try {
+      const resp = await axios.post("api/message", data);
+      console.log(resp.data);
 
-    console.log(data);
+      setMessage(resp.data.message);
+    } catch (err) {
+      // Handle Error Here
+      console.error(err);
+    }
   };
 
   return (

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-
 export class PobockaMap extends Component {
   render() {
     return (
@@ -29,5 +28,5 @@ export class PobockaMap extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyCKpl7eKy5fgRH8t6wKpYip1jVzr9EsTCQ",
+  apiKey: process.env.REACT_APP_GOOGLEAPIKEY,
 })(PobockaMap);
