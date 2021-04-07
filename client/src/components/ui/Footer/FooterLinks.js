@@ -5,10 +5,21 @@ const FooterLinks = () => {
     <div className="footer-links">
       <h3>MAPA</h3>
       <ul>
-        <li>Služby</li>
-        <li>Pronájem vozů</li>
-        <li>Podmínky</li>
-        <li>Napište nám</li>
+        <li>
+          <a href="pobocka"> O nás</a>
+        </li>
+        <li>
+          <a href="browse">Pronájem vozů</a>
+        </li>
+        <li>
+          <a href="/podminky">Podmínky</a>
+        </li>
+        <li>
+          <a href="/sluzby">Služby</a>
+        </li>
+        <li>
+          <a href="/pobocka">Napište nám</a>
+        </li>
       </ul>
     </div>
   );
