@@ -9,7 +9,6 @@ const PobockaForm = () => {
   const onSubmit = async (data) => {
     try {
       const resp = await axios.post("api/message", data);
-      console.log(resp.data);
 
       setMessage(resp.data.message);
     } catch (err) {
