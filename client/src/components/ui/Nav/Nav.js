@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import { useStateValue } from "../../../state";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -7,6 +8,8 @@ import Logo from "../../../images/ejede-logo.png";
 
 const Nav = () => {
   const [{ auth }, dispatch] = useStateValue();
+  let history = useHistory();
+
   const {
     user,
     isAuthenticated,
@@ -17,7 +20,12 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      <img className="logo-burger" src={Logo} alt="ejede logo" />
+      <img
+        className="logo-burger"
+        src={Logo}
+        alt="ejede logo"
+        onClick={() => history.push("/")}
+      />
 
       <ul>
         <li>
@@ -30,7 +38,7 @@ const Nav = () => {
           <Link to="/podminky">Podmínky</Link>
         </li>
         <li>
-          <Link to="/about" onClick={() => setVisible(false)}>
+          <Link to="/sluzby" onClick={() => setVisible(false)}>
             Služby
           </Link>
         </li>
@@ -45,16 +53,13 @@ const Nav = () => {
                 to="/"
                 onClick={() => logout({ returnTo: window.location.origin })}
               >
-                Log out
+                Odhlášení
               </Link>
             </li>
           </>
         ) : (
           // for not logged users
           <>
-            <li>
-              <Link to="/register">Registrace</Link>
-            </li>
             <li>
               <Link to="/" onClick={() => loginWithRedirect()}>
                 Přihlášení

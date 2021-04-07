@@ -2,12 +2,14 @@ import React, { useState } from "react";
 
 import { useAuth0 } from "@auth0/auth0-react";
 import { useStateValue } from "../../../state";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Logo from "../../../images/ejede-logo.png";
 import HamburgerMenuClosed from "../../../images/hamburger-menu-closed.png";
 import HamburgerMenuOpened from "../../../images/hamburger-menu-opened.png";
 
 const Burger = () => {
+  let history = useHistory();
   const [visible, setVisible] = useState(false);
   const [{ auth }, dispatch] = useStateValue();
   const {
@@ -19,7 +21,12 @@ const Burger = () => {
   } = useAuth0();
   return (
     <div className="burger">
-      <img className="logo-burger" src={Logo} alt="ejede logo" />
+      <img
+        className="logo-burger"
+        src={Logo}
+        alt="ejede logo"
+        onClick={() => history.push("/")}
+      />
 
       <h2>
         <a href="/">Ejede</a>
@@ -63,7 +70,7 @@ const Burger = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" onClick={() => setVisible(false)}>
+                <Link to="/sluzby" onClick={() => setVisible(false)}>
                   Služby
                 </Link>
               </li>
@@ -81,18 +88,13 @@ const Burger = () => {
                     to="/"
                     onClick={() => logout({ returnTo: window.location.origin })}
                   >
-                    Log out
+                    Odhlášení
                   </Link>
                 </li>
               </>
             ) : (
               // for not logged users
               <>
-                <li>
-                  <Link onClick={() => setVisible(false)} to="/register">
-                    Registrace
-                  </Link>
-                </li>
                 <li>
                   <Link to="/" onClick={() => loginWithRedirect()}>
                     Přihlášení
