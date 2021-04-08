@@ -38,9 +38,7 @@ const Nav = () => {
           <Link to="/podminky">Podmínky</Link>
         </li>
         <li>
-          <Link to="/sluzby" onClick={() => setVisible(false)}>
-            Služby
-          </Link>
+          <Link to="/sluzby">Služby</Link>
         </li>
         {/* user is logged? */}
         {isAuthenticated ? (
