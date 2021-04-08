@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useStateValue } from "../../../state";
 import SingleCarContentText from "./SingleCarContentText";
 import SingleCarContentTablet from "./SingleCarContentTablet.js";
+import SingleCarContentPc from "./SingleCarContentPc";
 
 const SingleCar = (props) => {
   let {
@@ -11,6 +12,8 @@ const SingleCar = (props) => {
     year,
     dayPrice,
     model,
+    color,
+    price,
     seats,
     doors,
     rating,
@@ -46,6 +49,7 @@ const SingleCar = (props) => {
         <div className="singleCar-content-img">
           <img src={image[0]} alt={make} />
           <SingleCarContentTablet />
+          <SingleCarContentPc info={{ color, range, price, dayPrice, seats }} />
         </div>
 
         <SingleCarContentText seats={seats} doors={doors} range={range} />

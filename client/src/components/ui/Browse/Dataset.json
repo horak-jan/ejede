@@ -1,0 +1,92 @@
+{
+  "car": [
+    {
+      "price": [434, 1000, 900, 5600, 8900, 13000],
+      "image": [
+        "https://images.dealer.com/ddc/vehicles/2019/Audi/e-tron/SUV/perspective/front-left/2019_76.png",
+        "https://images.dealer.com/ddc/vehicles/2019/Audi/e-tron/SUV/perspective/front-left/2019_76.png"
+      ],
+      "booked": [],
+      "_id": "602847428ac2290b9ee439d6",
+      "make": "Audi",
+      "model": "E Tron",
+      "year": 2020,
+      "seats": 4,
+      "color": "Modrá",
+      "dayPrice": 1000,
+      "doors": "5",
+      "range": 328,
+      "description": "Novinka na trhu",
+      "rating": 4.2,
+      "createdAt": "2021-02-13T21:40:18.854Z",
+      "updatedAt": "2021-02-13T21:40:18.854Z",
+      "__v": 0
+    },
+    {
+      "price": [434, 1000, 900, 5600, 8900, 13000],
+      "image": [
+        "https://www.svetauticek.cz/fotky22383/fotos/22383_45096_22383_43546_22383_38605__vyr_36504_188310.jpg",
+        "https://images.dealer.com/ddc/vehicles/2019/Audi/e-tron/SUV/perspective/front-left/2019_76.png"
+      ],
+      "booked": [],
+      "_id": "602998162e1164de768edab0",
+      "make": "Audi",
+      "model": "E Tron",
+      "year": 2020,
+      "seats": 4,
+      "color": "Bílá",
+      "dayPrice": 1000,
+      "doors": "5",
+      "range": 328,
+      "rating": 4.1,
+      "description": "Novinka na trhu",
+      "createdAt": "2021-02-13T21:40:18.854Z",
+      "updatedAt": "2021-02-13T21:40:18.854Z",
+      "__v": 0
+    },
+    {
+      "price": [497, 1300, 1200, 7000, 11000, 14900],
+      "image": [
+        "https://www.evrent.co.uk/wp-content/uploads/2020/01/ModelX.png",
+        "data:image/jpeg;base64,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"
+      ],
+      "booked": [],
+      "_id": "60303cb3676598e0eca43f0b",
+      "make": "Tesla",
+      "model": "Model X",
+      "year": 2020,
+      "seats": 4,
+      "color": "Bílá",
+      "dayPrice": 1300,
+      "doors": "5",
+      "range": 597,
+      "description": "Dlouhý dojezd.",
+      "rating": 4.3,
+      "createdAt": "2021-02-13T21:40:18.854Z",
+      "updatedAt": "2021-02-13T21:40:18.854Z",
+      "__v": 0
+    },
+    {
+      "price": [530, 1400, 1300, 8000, 13000, 16900],
+      "image": [
+        "https://imgd.aeplcdn.com/0x0/cw/ec/37138/Tesla-Model-3-Exterior-169923.jpg?wm=0",
+        "https://crdms.images.consumerreports.org/c_lfill,w_720,q_auto,f_auto/prod/cars/cr/model-years/7544-2016-tesla-models"
+      ],
+      "booked": [],
+      "_id": "60304231676598e0eca43f0c",
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2019,
+      "seats": 4,
+      "color": "Červená",
+      "dayPrice": 1400,
+      "doors": "5",
+      "range": 510,
+      "description": "Zákazníky  nejoblíbenější",
+      "rating": 4.6,
+      "createdAt": "2021-02-13T21:40:18.854Z",
+      "updatedAt": "2021-02-13T21:40:18.854Z",
+      "__v": 0
+    }
+  ]
+}
