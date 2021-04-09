@@ -62,13 +62,13 @@ require("./routes/index")(app);
 app.use(express.static(DIST_DIR));
 
 //catch-all for SSR
-// app.get("/*", function (req, res) {
-//   res.sendFile(path.join(DIST_DIR, "/index.html"), function (err) {
-//     if (err) {
-//       res.status(500).send(err);
-//     }
-//   });
-// });
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(DIST_DIR, "/index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
 
 app.listen(PORT, () =>
   console.log("Server running on http://localhost:" + PORT + "/")
