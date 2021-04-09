@@ -78,6 +78,7 @@ const Browse = () => {
         ) : (
           data.map((car) => <SingleCar key={car._id} car={car} />)
         )}
+        <div style={{ clear: "both" }}></div>
       </div>
     </div>
   );
