@@ -454,6 +454,160 @@ nav {
   margin-top: 1vh;
 }
 
+.car-view {
+  width: 100vw;
+  max-width: 1920px;
+  min-height: 70vh;
+}
+
+.car-view .container {
+  width: 90vw;
+  padding: 10px;
+  margin: 5vh auto;
+}
+
+.car-view .container .singleCar-content-pc {
+  display: block;
+}
+
+.car-view .container .singleCar-content-pc h2 {
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.car-view .container .singleCar-content-pc p {
+  display: block;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.car-view .container .singleCar-content-pc p .bold {
+  font-weight: 650;
+  color: #bb4f4f;
+}
+
+.car-view .container .singleCar-content-pc .price {
+  width: 80vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.car-view .container .singleCar-content-pc .price .header,
+.car-view .container .singleCar-content-pc .price .price-listing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+}
+
+.car-view .container .singleCar-content-pc .price .header p,
+.car-view .container .singleCar-content-pc .price .price-listing p {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #777;
+  margin: 15px;
+}
+
+.car-view .container .singleCar-content-pc .text {
+  margin-bottom: 4vh;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.car-view .container .car-form {
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+.car-view .container .car-form h2 {
+  text-align: center;
+  margin-top: 3vh;
+  padding-top: 5vh;
+  margin-bottom: 3vh;
+}
+
+.car-view .container .car-form p {
+  text-align: center;
+  margin-bottom: 5vh;
+  color: #777;
+}
+
+.car-view .container .car-form .predmet {
+  margin-top: 2vh;
+  margin-bottom: 15px;
+}
+
+.car-view .container .car-form h3 {
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 3vh;
+  color: #bb4f4f;
+  text-align: center;
+}
+
+.car-view .container .car-form label {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0.09rem;
+}
+
+.car-view .container .car-form input {
+  margin: 5px auto;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 12px;
+}
+
+.car-view .container .car-form .notes {
+  height: 60px;
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 2vh;
+}
+
+.car-view .container .car-form .form-error {
+  color: #e1251b;
+  text-align: center;
+  margin: 5px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.car-view .container .car-form .buttonWrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.car-view .container .car-form .buttonWrapper button {
+  height: 45px;
+  width: 40vw;
+  margin-bottom: 5vh;
+  border: none;
+  color: white;
+  font-weight: 650;
+  background-color: #0099ce;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-shadow: 2px 2px 3px 1px #000;
+          box-shadow: 2px 2px 3px 1px #000;
+  letter-spacing: 0.1rem;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 12px;
+}
+
 .pobocka {
   margin-bottom: 62vh;
 }
@@ -843,6 +997,92 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+  .car-view .container .singleCar-content-pc {
+    display: block;
+    padding-left: 3vw;
+    padding-left: 2vw;
+  }
+  .car-view .container .singleCar-content-pc h2 {
+    margin-top: 0;
+    margin-bottom: 1vh;
+    padding-left: 2vw;
+    text-align: left;
+  }
+  .car-view .container .singleCar-content-pc p {
+    display: block;
+    padding-left: 2vw;
+  }
+  .car-view .container .singleCar-content-pc p .bold {
+    font-weight: 650;
+    color: #bb4f4f;
+  }
+  .car-view .container .singleCar-content-pc p:first-of-type {
+    margin-bottom: 1vh;
+    text-align: left;
+  }
+  .car-view .container .singleCar-content-pc .price {
+    padding-left: 0;
+    display: block;
+    width: 100%;
+  }
+  .car-view .container .singleCar-content-pc .price .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 650;
+    color: #bb4f4f;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #777;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .car-view .container .singleCar-content-pc .price .header p {
+    width: 9vw;
+    border-bottom: none;
+    margin-left: 1vw;
+    padding-left: 1vw;
+    font-size: 12px;
+  }
+  .car-view .container .singleCar-content-pc .price .price-listing {
+    color: #777;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .car-view .container .singleCar-content-pc .price .price-listing p {
+    width: 9vw;
+    border-bottom: none;
+    margin-left: 1vw;
+    padding-left: 1vw;
+    font-size: 12px;
+  }
+  .car-view .container .singleCar-content-pc .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 3vh;
+  }
+  .car-view .container .singleCar-content-pc .text p {
+    width: 30%;
+    margin-bottom: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .car-view .container .car-form h2 {
+    text-align: left;
+    padding-left: 5vw;
+  }
   .pobocka {
     max-width: 1920px;
   }
@@ -900,7 +1140,7 @@ nav {
   .nav ul li {
     display: inline;
     padding-bottom: 10px;
-    margin-right: 2vw;
+    margin-right: 3vw;
   }
   .nav ul li a {
     text-decoration: none;
@@ -1101,6 +1341,10 @@ nav {
     height: 40vh;
     border-top: none;
     border-bottom: none;
+    margin-top: 10vh;
+  }
+  .browse .browse-container .singleCar div:first-of-type {
+    margin-top: 0;
   }
   .browse .browse-container .singleCar p,
   .browse .browse-container .singleCar h3 {
@@ -1246,14 +1490,29 @@ nav {
   .mid-bot button {
     width: 19vw !important;
   }
-}
-
-.footer .footer-content div .address {
-  margin-bottom: -1vh;
-}
-
-.footer .footer-content div .address p {
-  left: 30px;
-  top: -30px;
+  .car-view .container {
+    max-width: 1200px;
+  }
+  .car-view .container .singleCar-content-pc {
+    max-width: 950px;
+  }
+  .car-view .container .singleCar-content-pc .price .header p,
+  .car-view .container .singleCar-content-pc .price .price-listing p {
+    font-size: 16px;
+  }
+  .car-view .container .singleCar-content-pc .text {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .car-view .container .car-form h2 {
+    text-align: center;
+  }
+  .footer .footer-content div .address {
+    margin-bottom: -1vh;
+  }
+  .footer .footer-content div .address p {
+    left: 55px;
+    top: -30px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
