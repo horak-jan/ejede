@@ -20,52 +20,54 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      <img
-        className="logo-burger"
-        src={Logo}
-        alt="ejede logo"
-        onClick={() => history.push("/")}
-      />
+      <div>
+        <img
+          className="logo-burger"
+          src={Logo}
+          alt="ejede logo"
+          onClick={() => history.push("/")}
+        />
 
-      <ul>
-        <li>
-          <Link to="/">EJEDE</Link>
-        </li>
-        <li>
-          <Link to="/pobocka">O nás</Link>
-        </li>
-        <li>
-          <Link to="/podminky">Podmínky</Link>
-        </li>
-        <li>
-          <Link to="/sluzby">Služby</Link>
-        </li>
-        {/* user is logged? */}
-        {isAuthenticated ? (
-          <>
-            <li>
-              <Link to={`/user`}>Moje objednávky</Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                onClick={() => logout({ returnTo: window.location.origin })}
-              >
-                Odhlášení
-              </Link>
-            </li>
-          </>
-        ) : (
-          // for not logged users
-          <>
-            <li>
-              <Link to="/" onClick={() => loginWithRedirect()}>
-                Přihlášení
-              </Link>
-            </li>
-          </>
-        )}
-      </ul>
+        <ul>
+          <li>
+            <Link to="/">EJEDE</Link>
+          </li>
+          <li>
+            <Link to="/pobocka">O nás</Link>
+          </li>
+          <li>
+            <Link to="/podminky">Podmínky</Link>
+          </li>
+          <li>
+            <Link to="/sluzby">Služby</Link>
+          </li>
+          {/* user is logged? */}
+          {isAuthenticated ? (
+            <>
+              <li>
+                <Link to={`/user`}>Moje objednávky</Link>
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  onClick={() => logout({ returnTo: window.location.origin })}
+                >
+                  Odhlášení
+                </Link>
+              </li>
+            </>
+          ) : (
+            // for not logged users
+            <>
+              <li>
+                <Link to="/" onClick={() => loginWithRedirect()}>
+                  Přihlášení
+                </Link>
+              </li>
+            </>
+          )}
+        </ul>
+      </div>
     </nav>
   );
 };
