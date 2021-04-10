@@ -49,7 +49,9 @@ const SingleCar = (props) => {
         <div className="singleCar-content-img">
           <img src={image[0]} alt={make} />
           <SingleCarContentTablet />
-          <SingleCarContentPc info={{ make, model,color, range, price, dayPrice, seats }} />
+          <SingleCarContentPc
+            info={{ make, model, color, year, range, price, dayPrice, seats }}
+          />
         </div>
 
         <SingleCarContentText seats={seats} doors={doors} range={range} />

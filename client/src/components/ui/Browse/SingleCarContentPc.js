@@ -1,7 +1,16 @@
 import React from "react";
 
 const SingleCarContentPc = (props) => {
-  const { make, model, dayPrice, color, range, seats, price } = props.info;
+  const {
+    make,
+    model,
+    year,
+    dayPrice,
+    color,
+    range,
+    seats,
+    price,
+  } = props.info;
   return (
     <div className="singleCar-content-pc">
       <h2>
@@ -33,6 +42,10 @@ const SingleCarContentPc = (props) => {
       </div>
 
       <div className="text">
+        <p>
+          {" "}
+          <span className="bold">Rok výroby: </span> {year}
+        </p>
         <p>
           {" "}
           <span className="bold">Barva: </span> {color}
