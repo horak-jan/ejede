@@ -10,10 +10,7 @@ router.post("/", Booking.store);
 router.get("/", Booking.index);
 
 //SHOW
-router.get("/:id", Booking.show);
-
-//UPDATE
-router.put("/:id", Booking.update);
+router.get("/:email", Booking.show);
 
 //DELETE
 router.delete("/:id", Booking.destroy);

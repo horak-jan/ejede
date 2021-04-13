@@ -10,25 +10,28 @@ const BookingSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    startTime: {
+    carId: {
       type: String,
       required: true,
     },
-    endTime: {
+    firstName: {
       type: String,
       required: true,
     },
-    car: {
+    lastName: {
       type: String,
       required: true,
     },
-    pickUp: {
+    mobil: {
+      type: Number,
+      required: true,
+    },
+    email: {
       type: String,
       required: true,
     },
-    dropOff: {
+    notes: {
       type: String,
-      required: true,
     },
   },
   { timestamps: true }
