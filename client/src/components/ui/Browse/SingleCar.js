@@ -23,7 +23,7 @@ const SingleCar = (props) => {
   const [{ selectedCar }, dispatch] = useStateValue();
   let history = useHistory();
 
-  const pickThisCar = async (data) => {
+  const pickThisCar = (data) => {
     try {
       dispatch({
         type: "pickCar",
