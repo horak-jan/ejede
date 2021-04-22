@@ -3,7 +3,6 @@ import React from "react";
 const Terms = () => {
   return (
     <div className="terms">
-      <h2></h2>
       <h3>Podmínky zapůjčení</h3>
       <ul>
         <li>vlastnit řidičský průkaz</li>
