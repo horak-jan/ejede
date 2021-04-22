@@ -1,6 +1,6 @@
 import React from "react";
 
-import ModelX from "../../images/tesla-model-x-homepage.png";
+import ModelX from "../../../images/tesla-model-x-homepage.png";
 
 const HomepageCar = ({ cena, typ, osob, dalsi }) => {
   return (

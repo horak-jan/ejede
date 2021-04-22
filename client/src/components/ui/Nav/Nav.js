@@ -7,16 +7,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Logo from "../../../images/ejede-logo.png";
 
 const Nav = () => {
-  const [{ auth }, dispatch] = useStateValue();
+  const [auth, setAuth] = useStateValue();
   let history = useHistory();
 
-  const {
-    user,
-    isAuthenticated,
-    isLoading,
-    loginWithRedirect,
-    logout,
-  } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
   return (
     <nav className="nav">

@@ -1,40 +1,33 @@
 import React, { useState } from "react";
-import DatePicker from "react-date-picker";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
-import { useStateValue } from "../../state";
-import LoginButton from "./LoginButton";
-import LogoutButton from "./LogoutButton";
-import Profile from "./Profile";
+import { useStateValue } from "../../../state";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+import { registerLocale } from "react-datepicker";
+import cs from "date-fns/locale/cs";
+registerLocale("cs", cs);
 
 const HomeForm = () => {
-  const { register, handleSubmit, errors } = useForm();
-  const [startTime, setStartTime] = useState("12:00");
-  const [endTime, setEndTime] = useState("12:00");
   const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setendDate] = useState(
-    new Date(
-      startDate.getFullYear(),
-      startDate.getMonth(),
-      startDate.getDate() + 2
-    )
-  );
-
-  const [{ bookingDate }, dispatch] = useStateValue();
+  const [endDate, setEndDate] = useState(new Date());
+  const { register, handleSubmit, watch, errors } = useForm();
+  const [{ bookingDate }, dispatch] = useStateValue({});
+  const [pickup, setPickup] = useState("Centrum");
   let history = useHistory();
 
-  const onSubmit = async (data) => {
+  //set booking dates and pickup place
+  const setBookingAndRedirect = (pickup, startDate, endDate) => {
     try {
       dispatch({
         type: "bookDate",
+        setPickupPlace: pickup,
         setStartDate: startDate,
         setEndDate: endDate,
-        setAdults: data.adults,
-        setKids: data.kids,
       });
-
-      //redirect
+      // redirect to browse car
       history.push("/browse");
     } catch (error) {
       console.log(error);
@@ -43,69 +36,49 @@ const HomeForm = () => {
 
   return (
     <div>
-      <div className="home-picker">
-        <LoginButton />
-        <LogoutButton />
-        <Profile />
-        <br />
-        <div className="picker">
-          PŘÍJEZD
-          <br />
-          <DatePicker
-            calendarIcon={null}
-            onChange={setStartDate}
-            value={startDate}
-            format={"dd-MM-y"}
-            locale={"cs"}
-            minDate={new Date()}
-          />
-        </div>
-        <div className="picker-second">
-          ODJEZD
-          <br />
-          <DatePicker
-            calendarIcon={null}
-            onChange={setendDate}
-            value={endDate}
-            format={"dd-MM-y"}
-            locale={"cs"}
-            minDate={new Date()}
-            required={true}
-          />
-        </div>
+      <div>
+        {/* start picker */}
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+          locale="cs"
+          showTimeSelect
+          dateFormat="Pp"
+          minDate={new Date()}
+          minTime={new Date().setHours(8, 0)}
+          maxTime={new Date().setHours(18, 0)}
+        />
+        {/* end picker */}
+        <DatePicker
+          selected={startDate}
+          onChange={(date) => setEndDate(date)}
+          showTimeSelect
+          locale="cs"
+          selected={endDate}
+          showTimeSelect
+          dateFormat="Pp"
+          minDate={startDate}
+          minTime={new Date().setHours(8, 0)}
+          maxTime={new Date().setHours(18, 0)}
+        />
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="home-form-selects">
-          <div className="form-select">
-            <label>
-              Sedadel
-              <br />
-              <select name="adults" ref={register}>
-                <option value={1}>1 DOSPĚLÝ</option>
-                <option value={2}>2 DOSPĚLÍ</option>
-                <option value={3}>3 DOSPĚLÍ</option>
-                <option value={4}>4 DOSPĚLÍ</option>
-              </select>
-            </label>
-          </div>
-          <div className="form-select">
-            <label>
-              DĚTI
-              <br />
-              <select name="kids" ref={register}>
-                <option value={0}>BEZ DĚTÍ</option>
-                <option value={1}>1 DÍTĚ</option>
-                <option value={2}>2 DĚTI</option>
-                <option value={3}>3 DĚTI</option>
-                <option value={4}>4 DĚTI</option>
-              </select>
-            </label>
-          </div>
-        </div>
-        <input type="submit" />
+      {/* locations */}
+      <form>
+        <select
+          onChange={(e) => setPickup(e.target.value)}
+          name="pickupPlace"
+          defaultValue="Centrum"
+          ref={register}
+        >
+          <option value="Centrum">Centrum</option>
+          <option value="Poruba">Poruba</option>
+          <option value="Dubina">Dubina</option>
+        </select>
       </form>
+      <button onClick={() => setBookingAndRedirect(pickup, startDate, endDate)}>
+        Vybrat
+      </button>
     </div>
   );
 };
-
 export default HomeForm;

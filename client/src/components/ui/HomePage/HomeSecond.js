@@ -4,8 +4,7 @@ import HomepageCar from "./HomepageCar";
 const HomeSecond = () => {
   return (
     <div className="home-second">
-      <h2>Nabídka našich aut v Ostravě</h2>
-      <p className="home-second-p">Výběr oblíbených vozů našich klientů</p>
+      <h2>Nejnovější vozidla k pronájmu</h2>
       <div className="home-second-car-container">
         <HomepageCar
           cena="500"
