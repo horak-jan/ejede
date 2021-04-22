@@ -22,6 +22,10 @@ const CarSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    dayPrice: {
+      type: Number,
+      required: true,
+    },
     doors: {
       type: String,
       required: true,

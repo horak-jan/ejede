@@ -1,7 +1,6 @@
 const Booking = require("../models/booking");
 
 // GET api/booking
-//  Returns all bookings
 
 exports.index = async function (req, res) {
   try {
@@ -14,7 +13,6 @@ exports.index = async function (req, res) {
 };
 
 //  POST api/booking
-//  creating new booking
 
 exports.store = async (req, res) => {
   try {
@@ -51,7 +49,6 @@ exports.show = async function (req, res) {
 };
 
 //  DESTROY api/booking/{id}
-//  Delete booking
 
 exports.destroy = async function (req, res) {
   try {
@@ -59,7 +56,7 @@ exports.destroy = async function (req, res) {
 
     await Booking.findOneAndDelete({ _id: id });
 
-    res.status(200).json({ message: "Objednávka byla smazaná" });
+    res.status(200).json({ message: "Objednávka byla smazána" });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
