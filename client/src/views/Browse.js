@@ -1,38 +1,51 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import { useStateValue } from "../state";
 
-import SingleCar from "../components/ui/Browse/SingleCar";
 import BrowseTop from "../components/ui/Browse/BrowseTop";
+import CarsOnActualPage from "../components/ui/Browse/CarsOnActualPage";
+import PaginationButtons from "../components/ui/Browse/Pagination/PaginationButtons";
+import Pagination from "../components/ui/Browse/Pagination/Pagination";
 
 import Dataset from "../components/ui/Browse/Dataset.json";
+import ShowErrorMessage from "../components/ui/utils/ShowErrorMessage";
+import Loading from "../components/ui/utils/Loading";
+import SortAndOrder from "../components/ui/Browse/SortAndOrder/SortAndOrder";
 
 const Browse = () => {
   const [cars, setCars] = useState(Dataset.car);
-  const [page, setPage] = useState(1);
   // const [isLoading, setIsLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
   const [sortType, setSortType] = useState("");
-  const [data, setData] = useState([]);
+  const [sortedCars, setSortedCars] = useState([]);
+  const [showLowToHigh, setShowLowToHigh] = useState(false);
+
+  const [firstCar, lastCar, totalPages, setActualPage] = Pagination(
+    cars.length
+  );
+
+  const carsOnActualPage = cars.slice(firstCar, lastCar);
+  const sortedCarsOnActualPage = sortedCars.slice(firstCar, lastCar);
+  const sortedCarsOnActualPageLowToHigh = sortedCars
+    .reverse()
+    .slice(firstCar, lastCar);
 
   // useEffect(() => {
-  //   //get all from
-  //   async function getData() {
-  //     setIsError(false);
-
-  //     try {
-  //       const res = await Axios.get(`/api/car?page=${page}`);
-
-  //       setCars(res.data.car);
-  //     } catch (error) {
-  //       setIsError(true);
-  //     }
+  //   const getAllCars = () => {
+  //     Axios.get(`/api/car`)
+  //       .then((response) => {
+  //         setCars(response.data.car);
+  //       })
+  //       .catch((error) => {
+  //         setIsError(true);
+  //         console.log(error);
+  //       });
   //     setIsLoading(false);
-  //   }
-  //   getData();
-  // }, [page]);
+  //   };
+  //   getAllCars();
+  // }, []);
 
   // SORT
   useEffect(() => {
@@ -47,7 +60,7 @@ const Browse = () => {
       const sorted = [...cars].sort(
         (a, b) => b[sortProperty] - a[sortProperty]
       );
-      setData(sorted);
+      setSortedCars(sorted);
     };
     sortCars(sortType);
   }, [sortType]);
@@ -58,27 +71,35 @@ const Browse = () => {
         <h2>Nabídka vozů</h2>
 
         <BrowseTop />
-        <div className="sort">
-          {/* sort picker */}
-          <select onChange={(e) => setSortType(e.target.value)}>
-            <option value="rating">Hodnocení</option>
-            <option value="range">Dojezd</option>
-            <option value="price">Cena</option>
-          </select>
-          <p>Řadit dle:</p>
-        </div>
-        {/* show errors */}
-        {isError && <div>Někde se stala chyba ...</div>}
-        {/* show loader */}
+
+        <SortAndOrder
+          setSortType={setSortType}
+          setShowLowToHigh={setShowLowToHigh}
+          showLowToHigh={showLowToHigh}
+        />
+
+        {isError && <ShowErrorMessage />}
+
         {isLoading ? (
-          <div>'Načítám...'</div>
-        ) : data.length === 0 ? (
-          // if sorted
-          cars.map((car) => <SingleCar key={car._id} car={car} />)
+          <Loading />
+        ) : // first time sorting?
+        sortedCars.length === 0 ? (
+          // cars.map((car) => <SingleCar key={car._id} car={car} />)
+          <CarsOnActualPage carsOnActualPage={carsOnActualPage} />
+        ) : showLowToHigh ? (
+          //sorted cars low to high
+          <CarsOnActualPage
+            carsOnActualPage={sortedCarsOnActualPageLowToHigh}
+          />
         ) : (
-          data.map((car) => <SingleCar key={car._id} car={car} />)
+          //sorted cars high to low
+          // data.map((car) => <SingleCar key={car._id} car={car} />)
+          <CarsOnActualPage carsOnActualPage={sortedCarsOnActualPage} />
         )}
-        <div style={{ clear: "both" }}></div>
+        <PaginationButtons
+          setActualPage={setActualPage}
+          totalPages={totalPages}
+        />
       </div>
     </div>
   );

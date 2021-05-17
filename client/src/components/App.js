@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-
+import { withAuthenticationRequired } from "@auth0/auth0-react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "../styles/styles.css";
@@ -15,20 +15,15 @@ const About = lazy(() => import("../views/About"));
 const FinishOrder = lazy(() => import("../views/FinishOrder"));
 const Pobocka = lazy(() => import("../views/Pobocka"));
 const Home = lazy(() => import("../views/Home"));
+const Loading = lazy(() => import("../components/ui/utils/Loading"));
 
 import FourOhFour from "../views/FourOhFour";
 import OsobniUdaje from "../views/OsobniUdaje";
 
 const App = () => {
   const initialState = {
-    bookingDate: {
-      startDate: Date,
-      endDate: Date,
-      pickupPlace: "",
-    },
-    selectedCar: {
-      singleCar: {},
-    },
+    auth: {},
+    selectedCar: {},
     selectedPlace: {
       place: {
         link: "ostrava",
@@ -45,21 +40,11 @@ const App = () => {
         return {
           ...state,
           auth: {
-            isAuthenticated: action.authenticated,
-            token: action.resToken,
-            username: action.setUsername,
-            id: action.setId,
+            isAuthenticated: action.isAuthenticated,
+            user: action.setUser,
           },
         };
-      case "bookDate":
-        return {
-          ...state,
-          bookingDate: {
-            startDate: action.setStartDate,
-            endDate: action.setEndDate,
-            pickupPlace: action.setPickupPlace,
-          },
-        };
+
       case "pickCar":
         return {
           ...state,
@@ -81,7 +66,13 @@ const App = () => {
         <Suspense fallback={<div>Načítám...</div>}>
           <Switch>
             <Route exact path="/podminky" component={Terms} />
-            <Route exact path="/user" component={User} />
+            <Route
+              exact
+              path="/user"
+              component={withAuthenticationRequired(User, {
+                onRedirecting: () => <Loading />,
+              })}
+            />
             <Route exact path="/osobniudaje" component={OsobniUdaje} />
             <Route exact path="/browse" component={Browse} />
             <Route exact path="/finishOrder" component={FinishOrder} />

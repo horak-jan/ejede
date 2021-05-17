@@ -422,7 +422,10 @@ nav {
     width: 90vw;
     padding: 10px;
     margin: 5vh auto;
-
+    .ready-slider {
+      width: 1000px;
+      margin: 0 auto;
+    }
     .singleCar-content-pc {
       display: block;
       h2 {
@@ -465,6 +468,10 @@ nav {
     .car-form {
       margin-top: 10px;
       font-family: monospace;
+      margin: 1vh auto;
+      width: 360px;
+      max-width: 600px;
+      text-align: center;
 
       h2 {
         text-align: center;
@@ -472,14 +479,18 @@ nav {
         padding-top: 5vh;
         margin-bottom: 3vh;
       }
-      p {
-        text-align: center;
-        margin-bottom: 5vh;
-        color: #777;
-      }
+
       .predmet {
         margin-top: 2vh;
         margin-bottom: 15px;
+        .grey {
+          margin-bottom: 5vh;
+          color: #777;
+        }
+      }
+      .grey {
+        margin-bottom: 5vh;
+        color: #777;
       }
       h3 {
         font-size: 17px;
@@ -488,7 +499,9 @@ nav {
         color: #bb4f4f;
         text-align: center;
       }
-      label {
+
+      label,
+      p {
         display: block;
         text-align: center;
         margin-top: 10px;
@@ -497,13 +510,14 @@ nav {
 
       input {
         margin: 5px auto;
-        width: 100%;
         height: 30px;
         text-align: center;
         font-size: 20px;
         background-color: #e9ecef;
         border: none;
         border-radius: 12px;
+        width: 360px;
+        max-width: 600px;
       }
 
       .notes {
@@ -769,25 +783,36 @@ nav {
       margin-bottom: 3vh;
       margin-top: 3vh;
     }
-    .sort {
-      height: 45px;
-      margin-bottom: 3vh;
-      p {
+    .sort-and-order {
+      display: flex;
+      flex-direction: row-reverse;
+      .sort {
+        height: 45px;
+        margin-bottom: 3vh;
         margin-right: 10px;
-        font-size: 18px;
-        position: relative;
-        top: 5px;
-        float: right;
-      }
 
-      select {
-        float: right;
-        padding: 4px;
-        // margin-top: 2vh;
-        // margin-bottom: 1vh;
-        font-size: 15px;
-        position: relative;
-        // top: -6vh;
+        p {
+          margin-right: 10px;
+          font-size: 18px;
+          display: inline-block;
+          position: relative;
+          top: 5px;
+        }
+
+        select {
+          float: right;
+          padding: 4px;
+          font-size: 15px;
+          position: relative;
+        }
+      }
+      .show-in-order {
+        button {
+          padding: 5px;
+          background-color: white;
+          border: 1px solid black;
+          font-size: 16px;
+        }
       }
     }
     .browse-top {
@@ -870,6 +895,23 @@ nav {
         }
       }
     }
+    .pagination-buttons {
+      margin: 10vh auto 2vh;
+      width: 10vw;
+      height: 7vh;
+      color: white;
+      font-weight: 650;
+      clear: both;
+      button {
+        height: 5vh;
+        width: 3vw;
+        color: black;
+        background-color: white;
+        border-radius: 6px;
+        margin-left: 1vw;
+        border: 1px solid #0099ce;
+      }
+    }
   }
 }
 
@@ -894,7 +936,92 @@ nav {
 // MOBILE
 .user {
   min-height: 60vh;
-  padding-top: 10vh;
+  padding-top: 5vh;
+  width: 100vw;
+  max-width: 1920px;
+  h2 {
+    text-align: center;
+  }
+  .user-info {
+    padding: 5vh 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    h2 {
+      text-align: center;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+    h2 {
+      margin: 2vh 0 5vh;
+      text-align: center;
+    }
+    .show-all-booking-to-user {
+      text-align: center;
+
+      .single-booking {
+        width: 100%;
+        margin: 2vh auto;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        background-color: #f8f8f8;
+        .dates {
+          .red {
+            color: #c8102e;
+            font-weight: 600;
+          }
+        }
+        .red {
+          color: #c8102e;
+          font-weight: 600;
+        }
+        img {
+          width: 60vw;
+          margin-bottom: 4vh;
+        }
+        p {
+          margin-bottom: 2vh;
+        }
+        .delete-booking-buttons {
+          .delete {
+            background-color: #c8102e;
+            color: white;
+            font-weight: 600;
+            width: 40vw;
+            max-width: 170px;
+            height: 40px;
+          }
+          .delete-confirmation {
+            width: 60vw;
+            margin: 5vh auto;
+            h3 {
+              margin-bottom: 3vh;
+            }
+            .delete-confirmation-buttons {
+              display: flex;
+
+              button {
+                height: 40px;
+                width: 40vw;
+                max-width: 170px;
+                background-color: $blue-base-color;
+                color: white;
+                font-weight: 650;
+              }
+              button:first-of-type {
+                background-color: #c8102e;
+                margin-right: 3vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 //===========================TABLET=================================
@@ -912,6 +1039,28 @@ nav {
     margin-right: auto;
   }
 
+  .user {
+    .user-info {
+      .show-all-booking-to-user {
+        .single-booking {
+          img {
+            max-width: 360px;
+            height: 160px;
+          }
+          .dates {
+            display: flex;
+            max-width: 480px;
+            margin: 0 auto;
+            justify-content: space-evenly;
+            p:first-of-type {
+              margin-right: 2vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
   //car
   // TABLET
 
@@ -921,6 +1070,7 @@ nav {
         display: block;
         padding-left: 3vw;
         padding-left: 2vw;
+        margin: 0 auto;
 
         h2 {
           margin-top: 0;
@@ -960,9 +1110,6 @@ nav {
               padding-left: 1vw;
               font-size: 12px;
             }
-            // p:first-of-type {
-            //   margin-left: 0;
-            // }
           }
           .price-listing {
             color: #777;
@@ -992,9 +1139,9 @@ nav {
         }
       }
       .car-form {
-        h2 {
-          text-align: left;
-          padding-left: 5vw;
+        width: 600px;
+        input {
+          width: 600px;
         }
       }
     }
@@ -1031,7 +1178,6 @@ nav {
   }
 
   //navbar
-  // hide burger
   // TABLET
   .burger {
     display: none;
@@ -1048,14 +1194,7 @@ nav {
     border-bottom: #656262 solid 1px;
     box-shadow: 0 3px grey;
 
-    .logo-burger {
-      height: 50%;
-      width: 90px;
-      position: relative;
-      top: 20px;
-      left: 10px;
-      float: left;
-    }
+    .logo-burger,
     h2 {
       display: none;
     }
@@ -1256,6 +1395,20 @@ nav {
   }
 }
 
+@media (min-width: 700px) {
+  .nav {
+    .logo-burger {
+      display: block;
+      height: 50%;
+      width: 90px;
+      position: relative;
+      top: 20px;
+      left: 10px;
+      float: left;
+    }
+  }
+}
+
 //========================PC large==========================
 // 1000+
 @media (min-width: 1000px) {
@@ -1266,6 +1419,48 @@ nav {
   .about {
     max-width: 900px;
     min-height: 50vh;
+  }
+
+  // user page
+  // PC
+  .user {
+    .user-info {
+      .show-all-booking-to-user {
+        .single-booking {
+          display: flex;
+          justify-content: space-around;
+          .car-img {
+            margin: 0 0;
+          }
+          .dates {
+            display: block;
+            max-width: 480px;
+            margin: 0 0;
+            p:first-of-type {
+              margin-right: 0;
+            }
+          }
+          .delete-booking-buttons {
+            .delete-confirmation {
+              max-width: 170px;
+              margin: 2vh auto;
+              h3 {
+                margin-bottom: 10px;
+              }
+
+              .delete-confirmation-buttons {
+                display: block;
+                margin-top: 0;
+                button:first-of-type {
+                  margin-right: 0;
+                  margin-bottom: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   // navbar
@@ -1491,8 +1686,10 @@ nav {
         }
       }
       .car-form {
-        h2 {
-          text-align: center;
+        .buttonWrapper {
+          button {
+            max-width: 300px;
+          }
         }
       }
     }

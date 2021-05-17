@@ -466,6 +466,11 @@ nav {
   margin: 5vh auto;
 }
 
+.car-view .container .ready-slider {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 .car-view .container .singleCar-content-pc {
   display: block;
 }
@@ -524,6 +529,10 @@ nav {
 .car-view .container .car-form {
   margin-top: 10px;
   font-family: monospace;
+  margin: 1vh auto;
+  width: 360px;
+  max-width: 600px;
+  text-align: center;
 }
 
 .car-view .container .car-form h2 {
@@ -533,15 +542,19 @@ nav {
   margin-bottom: 3vh;
 }
 
-.car-view .container .car-form p {
-  text-align: center;
+.car-view .container .car-form .predmet {
+  margin-top: 2vh;
+  margin-bottom: 15px;
+}
+
+.car-view .container .car-form .predmet .grey {
   margin-bottom: 5vh;
   color: #777;
 }
 
-.car-view .container .car-form .predmet {
-  margin-top: 2vh;
-  margin-bottom: 15px;
+.car-view .container .car-form .grey {
+  margin-bottom: 5vh;
+  color: #777;
 }
 
 .car-view .container .car-form h3 {
@@ -552,7 +565,8 @@ nav {
   text-align: center;
 }
 
-.car-view .container .car-form label {
+.car-view .container .car-form label,
+.car-view .container .car-form p {
   display: block;
   text-align: center;
   margin-top: 10px;
@@ -561,13 +575,14 @@ nav {
 
 .car-view .container .car-form input {
   margin: 5px auto;
-  width: 100%;
   height: 30px;
   text-align: center;
   font-size: 20px;
   background-color: #e9ecef;
   border: none;
   border-radius: 12px;
+  width: 360px;
+  max-width: 600px;
 }
 
 .car-view .container .car-form .notes {
@@ -845,24 +860,42 @@ nav {
   margin-top: 3vh;
 }
 
-.browse .browse-container .sort {
+.browse .browse-container .sort-and-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.browse .browse-container .sort-and-order .sort {
   height: 45px;
   margin-bottom: 3vh;
+  margin-right: 10px;
 }
 
-.browse .browse-container .sort p {
+.browse .browse-container .sort-and-order .sort p {
   margin-right: 10px;
   font-size: 18px;
+  display: inline-block;
   position: relative;
   top: 5px;
-  float: right;
 }
 
-.browse .browse-container .sort select {
+.browse .browse-container .sort-and-order .sort select {
   float: right;
   padding: 4px;
   font-size: 15px;
   position: relative;
+}
+
+.browse .browse-container .sort-and-order .show-in-order button {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 16px;
 }
 
 .browse .browse-container .browse-top {
@@ -963,6 +996,25 @@ nav {
   font-weight: 650;
 }
 
+.browse .browse-container .pagination-buttons {
+  margin: 10vh auto 2vh;
+  width: 10vw;
+  height: 7vh;
+  color: white;
+  font-weight: 650;
+  clear: both;
+}
+
+.browse .browse-container .pagination-buttons button {
+  height: 5vh;
+  width: 3vw;
+  color: black;
+  background-color: white;
+  border-radius: 6px;
+  margin-left: 1vw;
+  border: 1px solid #0099ce;
+}
+
 .fourOhfour {
   min-height: 70vh;
   width: 70vw;
@@ -985,7 +1037,105 @@ nav {
 
 .user {
   min-height: 60vh;
-  padding-top: 10vh;
+  padding-top: 5vh;
+  width: 100vw;
+  max-width: 1920px;
+}
+
+.user h2 {
+  text-align: center;
+}
+
+.user .user-info {
+  padding: 5vh 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+
+.user .user-info h2 {
+  text-align: center;
+}
+
+.user .user-info img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.user .user-info h2 {
+  margin: 2vh 0 5vh;
+  text-align: center;
+}
+
+.user .user-info .show-all-booking-to-user {
+  text-align: center;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking {
+  width: 100%;
+  margin: 2vh auto;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #f8f8f8;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .dates .red {
+  color: #c8102e;
+  font-weight: 600;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .red {
+  color: #c8102e;
+  font-weight: 600;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking img {
+  width: 60vw;
+  margin-bottom: 4vh;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking p {
+  margin-bottom: 2vh;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete {
+  background-color: #c8102e;
+  color: white;
+  font-weight: 600;
+  width: 40vw;
+  max-width: 170px;
+  height: 40px;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation {
+  width: 60vw;
+  margin: 5vh auto;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation h3 {
+  margin-bottom: 3vh;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation .delete-confirmation-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation .delete-confirmation-buttons button {
+  height: 40px;
+  width: 40vw;
+  max-width: 170px;
+  background-color: #0099ce;
+  color: white;
+  font-weight: 650;
+}
+
+.user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation .delete-confirmation-buttons button:first-of-type {
+  background-color: #c8102e;
+  margin-right: 3vw;
 }
 
 @media (min-width: 605px) {
@@ -997,10 +1147,28 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+  .user .user-info .show-all-booking-to-user .single-booking img {
+    max-width: 360px;
+    height: 160px;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .dates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 480px;
+    margin: 0 auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .dates p:first-of-type {
+    margin-right: 2vw;
+  }
   .car-view .container .singleCar-content-pc {
     display: block;
     padding-left: 3vw;
     padding-left: 2vw;
+    margin: 0 auto;
   }
   .car-view .container .singleCar-content-pc h2 {
     margin-top: 0;
@@ -1079,9 +1247,11 @@ nav {
     margin-right: auto;
     text-align: left;
   }
-  .car-view .container .car-form h2 {
-    text-align: left;
-    padding-left: 5vw;
+  .car-view .container .car-form {
+    width: 600px;
+  }
+  .car-view .container .car-form input {
+    width: 600px;
   }
   .pobocka {
     max-width: 1920px;
@@ -1120,14 +1290,7 @@ nav {
     -webkit-box-shadow: 0 3px grey;
             box-shadow: 0 3px grey;
   }
-  .nav .logo-burger {
-    height: 50%;
-    width: 90px;
-    position: relative;
-    top: 20px;
-    left: 10px;
-    float: left;
-  }
+  .nav .logo-burger,
   .nav h2 {
     display: none;
   }
@@ -1312,12 +1475,57 @@ nav {
   }
 }
 
+@media (min-width: 700px) {
+  .nav .logo-burger {
+    display: block;
+    height: 50%;
+    width: 90px;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    float: left;
+  }
+}
+
 @media (min-width: 1000px) {
   .osobni-udaje,
   .terms,
   .about {
     max-width: 900px;
     min-height: 50vh;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .car-img {
+    margin: 0 0;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .dates {
+    display: block;
+    max-width: 480px;
+    margin: 0 0;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .dates p:first-of-type {
+    margin-right: 0;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation {
+    max-width: 170px;
+    margin: 2vh auto;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation h3 {
+    margin-bottom: 10px;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation .delete-confirmation-buttons {
+    display: block;
+    margin-top: 0;
+  }
+  .user .user-info .show-all-booking-to-user .single-booking .delete-booking-buttons .delete-confirmation .delete-confirmation-buttons button:first-of-type {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
   .nav div {
     max-width: 1200px;
@@ -1504,8 +1712,8 @@ nav {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .car-view .container .car-form h2 {
-    text-align: center;
+  .car-view .container .car-form .buttonWrapper button {
+    max-width: 300px;
   }
   .footer .footer-content div .address {
     margin-bottom: -1vh;

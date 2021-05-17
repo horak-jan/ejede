@@ -15,7 +15,7 @@ const User = () => {
     const getBookingsFromUser = () => {
       Axios.get(`/api/booking/${email}`)
         .then((response) => {
-          setAllBookings(res.data.booking);
+          setAllBookings(response.data.booking);
         })
         .catch((error) => {
           setIsError(true);
