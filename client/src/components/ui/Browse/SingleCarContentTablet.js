@@ -1,16 +1,24 @@
 import React from "react";
-import Checked from "../../../images/checked.png";
 
 const SingleCarContentTablet = () => {
   return (
     <div className="singleCar-content-tablet">
-      <img src={Checked} />
+      <img
+        src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356775/ejede/checked_zyhzuy.png"
+        alt="checked box"
+      />
 
       <p>Zimní výbava</p>
-      <img src={Checked} />
+      <img
+        src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356775/ejede/checked_zyhzuy.png"
+        alt="checked box"
+      />
 
       <p>Dezinfikované auto</p>
-      <img src={Checked} />
+      <img
+        src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356775/ejede/checked_zyhzuy.png"
+        alt="checked box"
+      />
 
       <p>Automatická převodovka</p>
     </div>

@@ -161,7 +161,7 @@ nav {
 }
 
 .home .home-first {
-  background-image: url("../images/home-bg.jpg");
+  background-image: url("https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356776/ejede/home-bg_bfrobp.webp");
   background-repeat: no-repeat;
   background-size: 135vh;
   min-height: 75vh;

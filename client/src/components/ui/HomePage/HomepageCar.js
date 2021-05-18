@@ -1,7 +1,5 @@
 import React from "react";
 
-import ModelX from "../../../images/tesla-model-x-homepage.png";
-
 const HomepageCar = ({ cena, typ, osob, dalsi }) => {
   return (
     <div className="homepage-car">
@@ -15,7 +13,10 @@ const HomepageCar = ({ cena, typ, osob, dalsi }) => {
         </div>
 
         <div className="obr">
-          <img src={ModelX} alt="tesla model x" />
+          <img
+            src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356776/ejede/tesla-model-x-homepage_yh22cz.png"
+            alt="tesla model x"
+          />
         </div>
       </div>
     </div>

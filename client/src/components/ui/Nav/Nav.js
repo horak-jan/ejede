@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-
 import { useStateValue } from "../../../state";
 import { useAuth0 } from "@auth0/auth0-react";
-import Logo from "../../../images/ejede-logo.png";
 
 const Nav = () => {
   const [auth, setAuth] = useStateValue();
@@ -17,7 +15,7 @@ const Nav = () => {
       <div>
         <img
           className="logo-burger"
-          src={Logo}
+          src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356775/ejede/ejede-logo_qbnjns.png"
           alt="ejede logo"
           onClick={() => history.push("/")}
         />

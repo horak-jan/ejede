@@ -4,9 +4,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useStateValue } from "../../../state";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Logo from "../../../images/ejede-logo.png";
-import HamburgerMenuClosed from "../../../images/hamburger-menu-closed.png";
-import HamburgerMenuOpened from "../../../images/hamburger-menu-opened.png";
 
 const Burger = () => {
   let history = useHistory();
@@ -23,7 +20,7 @@ const Burger = () => {
     <div className="burger">
       <img
         className="logo-burger"
-        src={Logo}
+        src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356775/ejede/ejede-logo_qbnjns.png"
         alt="ejede logo"
         onClick={() => history.push("/")}
       />
@@ -36,7 +33,7 @@ const Burger = () => {
         className={visible ? "burger-button-hidden" : "burger-button"}
         onClick={() => setVisible(true)}
         alt="closed menu button"
-        src={HamburgerMenuClosed}
+        src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356776/ejede/hamburger-menu-closed_svsywc.png"
       />
 
       <div className={visible ? "visible-style" : "hidden-style"}>
@@ -44,7 +41,7 @@ const Burger = () => {
           className="visible-burger-button"
           onClick={() => setVisible(false)}
           alt="opened menu button"
-          src={HamburgerMenuOpened}
+          src="https://res.cloudinary.com/dsdaneoq8/image/upload/v1621356776/ejede/hamburger-menu-opened_iq6hio.png"
         />
         <div>
           <p>
