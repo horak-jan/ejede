@@ -2,7 +2,6 @@ import React from "react";
 
 import HomeFirst from "../components/ui/HomePage/HomeFirst";
 import HomeFirstInfo from "../components/ui/HomePage/HomeFirstInfo";
-import HomeSecond from "../components/ui/HomePage/HomeSecond";
 import HomeSecondInfo from "../components/ui/HomePage/HomeSecondInfo";
 
 const Home = () => {
@@ -20,8 +19,6 @@ const Home = () => {
       <HomeFirstInfo />
 
       <HomeSecondInfo />
-
-      <HomeSecond />
     </div>
   );
 };
