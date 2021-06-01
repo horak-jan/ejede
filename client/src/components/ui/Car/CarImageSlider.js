@@ -12,7 +12,7 @@ const CarImageSlider = (props) => {
   //style setting for carousel
   const StyleSettings = {
     width: "100%",
-    maxWidth: "1000px",
+    maxWidth: "1200px",
     height: "50vh",
     margin: "2vh auto",
   };
@@ -20,16 +20,12 @@ const CarImageSlider = (props) => {
   return (
     <div className="ready-slider">
       <Slider {...settings}>
-        <div>
-          <img src={props.images[0]} style={StyleSettings} />
-        </div>
-        <div>
-          <img src={props.images[1]} style={StyleSettings} />
-        </div>
-        {/* <div className="ready-slider-slide-three">
-          <img src={Image3} style={StyleSettings} />
-          <div style={DivStyle}></div>
-        </div> */}
+        {props.images.map((image) => (
+          // feed images one by one to slider to display
+          <div key={image}>
+            <img src={image} style={StyleSettings} />
+          </div>
+        ))}
       </Slider>
     </div>
   );

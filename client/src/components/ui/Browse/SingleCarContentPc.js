@@ -31,12 +31,9 @@ const SingleCarContentPc = (props) => {
           <p>Kauce</p>
         </div>
         <div className="price-listing">
-          <p>{price[0]} Kč</p>
-          <p>{price[1]} Kč</p>
-          <p>{price[2]} Kč</p>
-          <p>{price[3]} Kč</p>
-          <p>{price[4]} Kč</p>
-          <p>{price[5]} Kč</p>
+          {price.map((singlePrice) => (
+            <p key={singlePrice}>{singlePrice} Kč</p>
+          ))}
           <p>5000 Kč</p>
         </div>
       </div>

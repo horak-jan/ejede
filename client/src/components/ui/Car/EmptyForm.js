@@ -16,7 +16,6 @@ const EmptyForm = (props) => {
 
   const onSubmit = (data) => {
     let completeData = {
-      carId: selectedCar.selectedCar.car._id,
       startDate: startDate,
       endDate: endDate,
       carImage: selectedCar.selectedCar.car.image[0],
@@ -24,7 +23,6 @@ const EmptyForm = (props) => {
     };
     sendForm(completeData);
   };
-
   return (
     <>
       <p>Zapůjčení</p>

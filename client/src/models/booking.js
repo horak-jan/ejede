@@ -10,10 +10,6 @@ const BookingSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    carId: {
-      type: String,
-      required: true,
-    },
     firstName: {
       type: String,
       required: true,
@@ -26,7 +22,10 @@ const BookingSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    carImage: String,
+    carImage: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,
