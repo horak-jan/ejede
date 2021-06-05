@@ -30,7 +30,7 @@
     "infinite-react-carousel": "^1.2.11",
     "mongoose": "5.9.5",
     "nodemon": "^2.0.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "react": "16.13.0",
     "react-datepicker": "^3.6.0",
     "react-dom": "16.13.0",
