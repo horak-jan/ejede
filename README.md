@@ -46,9 +46,11 @@ $ npm start
 ```
 ## Screenshots
 
-![Mobile](https://res.cloudinary.com/dsdaneoq8/image/upload/v1623015293/draculino/Screenshot_2021-06-05_00.25.17_y5w1ym.png)
+![Mobile](https://res.cloudinary.com/dsdaneoq8/image/upload/v1623016418/ejede/Screenshot_2021-06-06_23.47.51_kn18of.png)
 
-![desktop](https://res.cloudinary.com/dsdaneoq8/image/upload/v1623015294/draculino/Screenshot_2021-06-05_00.26.27_rikgwg.png)
+![Tablet](https://res.cloudinary.com/dsdaneoq8/image/upload/v1623016418/ejede/Screenshot_2021-06-06_23.48.11_zh32pu.png)
+
+![desktop](https://res.cloudinary.com/dsdaneoq8/image/upload/v1623016418/ejede/Screenshot_2021-06-06_23.49.55_mrpspo.png)
 
 
 
