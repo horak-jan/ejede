@@ -5,6 +5,7 @@ Electric vehicle rental service.
 ## Table of Contents
 * [Introduction](#introduction)
 * [Demo](#demo)
+* [Features](#features)
 * [How To Use](#how-to-use)
 * [Screenshots](#screenshots)
 * [Room for Improvement](#room-for-improvement)
@@ -19,11 +20,13 @@ Electric vehicle rental service.
 
 You can find here information regarding electric vehicles rental service, locations in several cities, contact details, rules, prices and pictures of available cars.
 
-Logged in users can see / delete created orders in the “Moje objednávky” section.
-
 ## Demo
 
 Here is a working live demo : [ejede](https://ejede.herokuapp.com/)
+
+## Features
+
+Logged in users can see / delete created orders in the “Moje objednávky” section.
 
 ## How To Use
 
