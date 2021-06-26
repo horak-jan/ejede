@@ -28,6 +28,10 @@ Here is a working live demo : [ejede](https://ejede.herokuapp.com/)
 
 Logged in users can see / delete created orders in the “Moje objednávky” section.
 
+Authentication with [Auth0](https://auth0.com/)
+
+Cars can be sorted by price, range or user ratings.
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com/)) installed on your computer. From your command line:
